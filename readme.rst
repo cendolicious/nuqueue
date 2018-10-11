@@ -22,8 +22,8 @@ Pada repository ini juga terdapat API untuk pengelolaan data pada NuQueue Androi
         :alt: Dashboard NuQueue CS
         :width: 100%
         :align: center
-        
-.. image:: https://image.ibb.co/idfsEU/Daftar_Antrian_Pasien_Baru.png
+		
+    .. image:: https://image.ibb.co/idfsEU/Daftar_Antrian_Pasien_Baru.png
         :alt: Pendaftaran Antrian
         :width: 100%
         :align: center
