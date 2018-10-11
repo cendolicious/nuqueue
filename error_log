@@ -1,0 +1,14 @@
+[13-Jul-2018 08:23:00 Asia/Jakarta] PHP Fatal error:  Call to undefined function pdf() in /home/nuqueuew/public_html/application/controllers/Nuqueue.php on line 820
+[13-Jul-2018 08:23:35 Asia/Jakarta] PHP Fatal error:  Call to undefined function pdf() in /home/nuqueuew/public_html/application/controllers/Nuqueue.php on line 871
+[13-Jul-2018 08:29:12 Asia/Jakarta] PHP Fatal error:  Call to undefined function printpdf() in /home/nuqueuew/public_html/application/controllers/Nuqueue.php on line 873
+[13-Jul-2018 01:44:45 UTC] PHP Parse error:  syntax error, unexpected '.1' (T_DNUMBER) in /home/nuqueuew/public_html/application/controllers/Nuqueue.php on line 913
+[13-Jul-2018 01:44:55 UTC] PHP Parse error:  syntax error, unexpected '.1' (T_DNUMBER) in /home/nuqueuew/public_html/application/controllers/Nuqueue.php on line 913
+[13-Jul-2018 01:44:58 UTC] PHP Parse error:  syntax error, unexpected '.1' (T_DNUMBER) in /home/nuqueuew/public_html/application/controllers/Nuqueue.php on line 913
+[13-Jul-2018 01:45:34 UTC] PHP Fatal error:  Call to a member function result() on string in /home/nuqueuew/public_html/application/controllers/Nuqueue.php on line 662
+[30-Jul-2018 10:32:10 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/nuqueuew/public_html/application/controllers/Api.php on line 115
+[30-Jul-2018 10:32:35 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/nuqueuew/public_html/application/controllers/Api.php on line 115
+[30-Jul-2018 10:33:03 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/nuqueuew/public_html/application/controllers/Api.php on line 115
+[30-Jul-2018 10:34:58 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/nuqueuew/public_html/application/controllers/Api.php on line 115
+[30-Jul-2018 10:39:18 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/nuqueuew/public_html/application/controllers/Api.php on line 115
+[30-Jul-2018 10:39:23 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/nuqueuew/public_html/application/controllers/Api.php on line 115
+[30-Jul-2018 10:40:00 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/nuqueuew/public_html/application/controllers/Api.php on line 115
