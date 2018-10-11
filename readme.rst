@@ -8,7 +8,7 @@ NuQueue dibangun dari empat aplikasi yang disesuaikan dengan kebutuhan antrian d
 
 Pada repository ini juga terdapat API untuk pengelolaan data pada NuQueue Android berbentuk REST API (JSON).
 
-    .. image:: https://preview.ibb.co/hGy18p/Portal_Nu_Queue.png
+    .. image:: https://image.ibb.co/fx5g8p/Portal_Nu_Queue.png
         :alt: Portal NuQueue
         :width: 100%
         :align: center
