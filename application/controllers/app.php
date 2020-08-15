@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Nuqueue extends CI_Controller {
+class app extends CI_Controller {
 
 	public function __construct()
     {
@@ -35,9 +35,9 @@ class Nuqueue extends CI_Controller {
 			$this->session->set_userdata('telepon_rs',$getDataRS->telepon_rs);
 			
 				if ($email_rs == 'admin@nuqueue.com') {
-					redirect('nuqueue/dashboard_admin');
+					redirect('app/dashboard_admin');
 				}else{
-					redirect('nuqueue/dashboard_rs');
+					redirect('app/dashboard_rs');
 				}
 		}
 		
@@ -68,7 +68,7 @@ class Nuqueue extends CI_Controller {
 		$this->session->set_userdata('alamat_rs',$getDataRS->alamat_rs);
 		$this->session->set_userdata('telepon_rs',$getDataRS->telepon_rs);
 
-		redirect('nuqueue/dashboard_rs');
+		redirect('app/dashboard_rs');
 	}
 
 	//////////////////
@@ -106,7 +106,7 @@ class Nuqueue extends CI_Controller {
 		          'id_rs' => $id
 		          );
 		      $this->crud_m->updateData('rumahsakit',$data,$where);
-		      redirect('nuqueue/kelola_rs');
+		      redirect('app/kelola_rs');
 	}
 
 	public function aktivasi_rs($id)
@@ -118,7 +118,7 @@ class Nuqueue extends CI_Controller {
 		          'id_rs' => $id
 		          );
 		      $this->crud_m->updateData('rumahsakit',$data,$where);
-		      redirect('nuqueue/kelola_rs');
+		      redirect('app/kelola_rs');
 	}
 
 
@@ -148,7 +148,7 @@ class Nuqueue extends CI_Controller {
 		          'id_rs' => $this->session->userdata('id_rs')
 		          );
 		      $this->crud_m->updateData('rumahsakit',$data,$where);
-		      redirect('nuqueue/dashboard_rs');
+		      redirect('app/dashboard_rs');
 	}
 
 	public function tutup_rs()
@@ -160,7 +160,7 @@ class Nuqueue extends CI_Controller {
 		          'id_rs' => $this->session->userdata('id_rs')
 		          );
 		      $this->crud_m->updateData('rumahsakit',$data,$where);
-		      redirect('nuqueue/dashboard_rs');
+		      redirect('app/dashboard_rs');
 	}
 
 	public function edit_api($id_rs)
@@ -196,7 +196,7 @@ class Nuqueue extends CI_Controller {
 		          );
 
 		$this->crud_m->updateData('rumahsakit',$data,$where);
-		redirect('nuqueue/dashboard_rs');
+		redirect('app/dashboard_rs');
 	}
 
 	public function kelola_poli()
@@ -225,7 +225,7 @@ class Nuqueue extends CI_Controller {
 		);
 		$this->crud_m->insertData('poliklinik',$data);
 
-		redirect('nuqueue/kelola_poli');
+		redirect('app/kelola_poli');
 	}
 
 	public function hapus_poli($id_poli)
@@ -234,7 +234,7 @@ class Nuqueue extends CI_Controller {
 			'id_poli' => $id_poli
 		);
 		$this->crud_m->deleteData('poliklinik',$where);
-		redirect('nuqueue/kelola_poli');
+		redirect('app/kelola_poli');
 	}
 
 	public function edit_poli($id_poli)
@@ -270,7 +270,7 @@ class Nuqueue extends CI_Controller {
 		          );
 
 		$this->crud_m->updateData('poliklinik',$data,$where);
-		redirect('nuqueue/kelola_poli');
+		redirect('app/kelola_poli');
 	}
 
 	public function kelola_dokter()
@@ -301,7 +301,7 @@ class Nuqueue extends CI_Controller {
 		);
 		$this->crud_m->insertData('dokter',$data);
 
-		redirect('nuqueue/kelola_dokter');
+		redirect('app/kelola_dokter');
 	}
 
 	public function hapus_dokter($id_dokter)
@@ -310,7 +310,7 @@ class Nuqueue extends CI_Controller {
 			'id_dokter' => $id_dokter
 		);
 		$this->crud_m->deleteData('dokter',$where);
-		redirect('nuqueue/kelola_dokter');
+		redirect('app/kelola_dokter');
 	}
 
 	public function edit_dokter($id_dokter)
@@ -347,7 +347,7 @@ class Nuqueue extends CI_Controller {
 		          );
 
 		$this->crud_m->updateData('dokter',$data,$where);
-		redirect('nuqueue/kelola_dokter');
+		redirect('app/kelola_dokter');
 	}
 
 	public function kelola_jadwal()
@@ -372,7 +372,7 @@ class Nuqueue extends CI_Controller {
 			'id_jadwal' => $id_jadwal
 		);
 		$this->crud_m->deleteData('jadwal',$where);
-		redirect('nuqueue/kelola_jadwal');
+		redirect('app/kelola_jadwal');
 	}
 
 	public function tambah_jadwal()
@@ -402,7 +402,7 @@ class Nuqueue extends CI_Controller {
 		);
 		$this->crud_m->insertData('jadwal',$data);
 
-		redirect('nuqueue/kelola_jadwal');
+		redirect('app/kelola_jadwal');
 	}
 
 	public function edit_jadwal($id_jadwal)
@@ -442,7 +442,7 @@ class Nuqueue extends CI_Controller {
 		          );
 
 		$this->crud_m->updateData('jadwal',$data,$where);
-		redirect('nuqueue/kelola_jadwal');
+		redirect('app/kelola_jadwal');
 	}
 
 
@@ -475,7 +475,7 @@ class Nuqueue extends CI_Controller {
 		);
 		$this->crud_m->insertData('cs',$data);
 
-		redirect('nuqueue/kelola_cs');
+		redirect('app/kelola_cs');
 	}
 
 	public function edit_cs($id_cs)
@@ -514,7 +514,7 @@ class Nuqueue extends CI_Controller {
 		          );
 
 		$this->crud_m->updateData('cs',$data,$where);
-		redirect('nuqueue/kelola_cs');
+		redirect('app/kelola_cs');
 	}
 
 	public function filter()
@@ -584,7 +584,7 @@ class Nuqueue extends CI_Controller {
 		          );
 
 		$this->crud_m->updateData('rumahsakit',$data,$where);
-		redirect('nuqueue/profil_rs');
+		redirect('app/profil_rs');
 	}
 
 	//////////////////
@@ -607,7 +607,7 @@ class Nuqueue extends CI_Controller {
 			$this->session->set_userdata('password_cs',$getDataCS->password_cs);
 			$this->session->set_userdata('id_rs',$getDataCS->id_rs);
 	
-			redirect('nuqueue/dashboard_cs');
+			redirect('app/dashboard_cs');
 		}
 		
 	}
@@ -843,7 +843,7 @@ class Nuqueue extends CI_Controller {
 
 
 
-		redirect('nuqueue/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal);
+		redirect('app/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal);
 		
 	}
 
@@ -922,7 +922,7 @@ $html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Te
 		$name = '/TIKET-'.$today.'-'.$id_rs.$id_poli.$id_jadwal.'-'.$no_antrian.'.pdf';
 		$dest = 'I'; //'I','F','D'
 		$pdf->Output($name,$dest);*/
-		redirect('nuqueue/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal.'/1');
+		redirect('app/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal.'/1');
 		
 	}
 
@@ -961,7 +961,7 @@ $html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Te
 		}
 
 		
-		redirect('nuqueue/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal);
+		redirect('app/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal);
 	}
 
 }

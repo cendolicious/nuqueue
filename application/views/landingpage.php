@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>NuQueue - Do Queue Anywhere</title>
+    <title>Sistem Antrian RS Sinar Kasih Toraja</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>assetslanding/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">NUQUEUE</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">RS Sinar Kasih</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -57,17 +57,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h1 class="brand-heading">NUQUEUE</h1>
-              <p class="intro-text">Make your queue easier!</p>
+              <h1 class="brand-heading">RS Sinar Kasih</h1>
+              <p class="intro-text"></p>
               <div class="row">
           <div class="col-lg-8 mx-auto">
             <ul class="list-inline banner-social-buttons">
-              <li data-toggle="modal" data-target="#ModalRegister" class="list-inline-item">
+             <!--  <li data-toggle="modal" data-target="#ModalRegister" class="list-inline-item">
                 <a class="btn btn-default btn-lg">
                   <i class="fa fa-user-plus fa-fw"></i>
                   <span class="network-name">Daftar Mitra</span>
                 </a>
-              </li>
+              </li>-->
               <li data-toggle="modal" data-target="#ModalLogin" id="btnmasuk" class="list-inline-item">
                 <a class="btn btn-default btn-lg">
                   <i class="fa fa-sign-in fa-fw"></i>
@@ -87,10 +87,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
     </header>
 
-    <!-- Modal Register-->
+    <!-- Modal Register
 <div id="ModalRegister" class="modal fade inmodal" role="dialog">
   <div class="modal-dialog modal-lg">
-    <!-- Modal content-->
+ 
     <div class="modal-content">
       <div class="modal-header modal-lg">
         <h5 class="modal-title">Daftar sebagai mitra NuQueue</h5>
@@ -133,14 +133,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </form>
                 </div>
             </div>
-      </div>
+      </div>  -->
       <!-- <div class="modal-footer">
         <button type="button" class="btn btn-default inmodal" data-dismiss="modal">Close</button>
-      </div> -->
+      </div> 
     </div>
   </div>
 </div>
-
+      -->
 <!-- Modal Login-->
 <div id="ModalLogin" class="modal fade inmodal" role="dialog">
   <div class="modal-dialog modal-lg">
@@ -225,36 +225,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
 </div>
 
-    <!-- Contact Section -->
-    <section id="about" class="content-section text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Yang Buat</h2>
-            <p>Diki dengan penuh perjuangan</p>
-            <ul class="list-inline banner-social-buttons">
-              <li class="list-inline-item">
-                <a href="https://facebook.com/dickyeka" class="btn btn-default btn-lg">
-                  <i class="fa fa-facebook fa-fw"></i>
-                  <span class="network-name">Facebook</span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://instagram.com/dicky_eka" class="btn btn-default btn-lg">
-                  <i class="fa fa-instagram fa-fw"></i>
-                  <span class="network-name">Instagram</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Footer -->
     <footer>
       <div class="container text-center">
-        <p>Copyright &copy; NuQueue 2018</p>
+        <p>Copyright 2020</p>
       </div>
     </footer>
 
