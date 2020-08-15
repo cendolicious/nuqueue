@@ -11,7 +11,7 @@
        <!-- body modal -->
        <div class="modal-body">
 <div class="bootbox-body row">
-           <form action="<?php echo site_url('nuqueue/tambah_cs') ?>" method="post">
+           <form action="<?php echo site_url('app/tambah_cs') ?>" method="post">
             
                <div class="form-group col-md-12">
                    <label>Nama CS</label>

@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">RS Sinar Kasih</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Sistem Antrian RS Sinar Kasih Toraja</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h1 class="brand-heading">RS Sinar Kasih</h1>
+              <h1 class="brand-heading"></h1>
               <p class="intro-text"></p>
               <div class="row">
           <div class="col-lg-8 mx-auto">

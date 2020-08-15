@@ -6,7 +6,7 @@
                             echo 'nav-item';
                         }
                         ?>">
-                            <a href="<?php echo site_url('nuqueue/dashboard_rs');?>" class="nav-link nav-toggle">
+                            <a href="<?php echo site_url('app/dashboard_rs');?>" class="nav-link nav-toggle">
                                 <i class="icon-home"></i>
                                 <?php
                         if($this->uri->segment(2) == 'dashboard_rs' || $this->uri->segment(2) == 'edit_api'){
@@ -25,7 +25,7 @@
                             echo 'nav-item';
                         }
                         ?>">
-                            <a href="<?php echo site_url('nuqueue/kelola_poli');?>" class="nav-link nav-toggle">
+                            <a href="<?php echo site_url('app/kelola_poli');?>" class="nav-link nav-toggle">
                                 <i class="fa fa-medkit"></i>
                                 <?php
                         if($this->uri->segment(2) == 'kelola_poli' || $this->uri->segment(2) == 'edit_poli'){
@@ -49,7 +49,7 @@
                             echo 'nav-item';
                         }
                         ?>">
-                            <a href="<?php echo site_url('nuqueue/kelola_dokter');?>" class="nav-link nav-toggle"
+                            <a href="<?php echo site_url('app/kelola_dokter');?>" class="nav-link nav-toggle"
 
                                 <?php if ($href != 'kelola_dokter'): ?>
                                     onClick="return alert('Silahkan tambahkan Poliklinik terlebih dahulu.')" style="color:#c0392b;"
@@ -83,7 +83,7 @@
                             echo 'nav-item';
                         }
                         ?>">
-                            <a href="<?php echo site_url('nuqueue/kelola_jadwal');?>" class="nav-link nav-toggle disabled"
+                            <a href="<?php echo site_url('app/kelola_jadwal');?>" class="nav-link nav-toggle disabled"
 
                                 <?php if ($href != 'kelola_jadwal'): ?>
                                     onClick="return alert('Silahkan tambahkan Dokter terlebih dahulu.')" style="color:#c0392b;"
@@ -111,7 +111,7 @@
                             echo 'nav-item';
                         }
                         ?>">
-                            <a href="<?php echo site_url('nuqueue/kelola_cs')?>" class="nav-link nav-toggle">
+                            <a href="<?php echo site_url('app/kelola_cs')?>" class="nav-link nav-toggle">
                                 <i class="fa fa-child"></i>
                                 <?php
                         if($this->uri->segment(2) == 'kelola_cs' || $this->uri->segment(2) == 'edit_cs' ){
@@ -128,7 +128,7 @@
                             echo 'nav-item';
                         }
                         ?>">
-                            <a href="<?php echo site_url('nuqueue/profil_rs')?>" class="nav-link nav-toggle">
+                            <a href="<?php echo site_url('app/profil_rs')?>" class="nav-link nav-toggle">
                                 <i class="fa fa-user"></i>
                                 <?php
                         if($this->uri->segment(2) == 'profil_rs' || $this->uri->segment(2) == 'edit_profil_rs' ){

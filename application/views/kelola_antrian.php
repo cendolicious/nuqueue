@@ -168,15 +168,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="page-breadcrumb">
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('nuqueue/dashboard_rs');?>">Home</a>
+                                <a href="<?php echo site_url('app/dashboard_rs');?>">Home</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('nuqueue/kelola_antrian');?>">Pilih Poliklinik</a>
+                                <a href="<?php echo site_url('app/kelola_antrian');?>">Pilih Poliklinik</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('nuqueue/kelola_antrian_poli');?>/<?php echo $id_poli?>">Pilih Jadwal Poliklinik</a>
+                                <a href="<?php echo site_url('app/kelola_antrian_poli');?>/<?php echo $id_poli?>">Pilih Jadwal Poliklinik</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
@@ -260,7 +260,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
                                 </div>
                                 <div class="portlet-body text-center">
-                                     <form action="<?php echo site_url('Nuqueue/panggil_antrian') ?>" method="post">
+                                     <form action="<?php echo site_url('app/panggil_antrian') ?>" method="post">
                                         <input type="hidden" name="id_rs" value="<?php echo $id_rs;?>"/>
               <input type="hidden" name="id_poli" value="<?php echo $id_poli;?>"/>
               <input type="hidden" name="id_jadwal" value="<?php echo $id_jadwal;?>"/>
@@ -287,7 +287,7 @@ echo $antrian_selanjutnya;?>"/>
         <!-- END CONTAINER -->
         <!-- BEGIN FOOTER -->
         <div class="page-footer">
-            <div class="page-footer-inner"> NuQueue, 2018
+            <div class="page-footer-inner"> RS Sinar Kasih, 2020
                 <div class="scroll-to-top">
                     <i class="icon-arrow-up"></i>
                 </div>

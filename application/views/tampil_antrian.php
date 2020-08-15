@@ -235,7 +235,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- END CONTAINER -->
         <!-- BEGIN FOOTER -->
         <div class="page-footer">
-            <div class="page-footer-inner"> NuQueue, 2018
+            <div class="page-footer-inner"> RS Sinar Kasih, 2020
                 <div class="scroll-to-top">
                     <i class="icon-arrow-up"></i>
                 </div>

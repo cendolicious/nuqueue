@@ -146,11 +146,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="page-breadcrumb">
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('nuqueue/dashboard_rs');?>">Home</a>
+                                <a href="<?php echo site_url('app/dashboard_rs');?>">Home</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('nuqueue/kelola_antrian');?>">Pilih Poliklinik</a>
+                                <a href="<?php echo site_url('app/kelola_antrian');?>">Pilih Poliklinik</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
@@ -198,7 +198,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                ?></h5>
                                <h2 style="margin-top: 0;"><?php echo $key->nama_dokter;?></h2>
                                <h4><?php echo substr($key->jammulai_poli,0,5).' - '.substr($key->jamselesai_poli,0,5)?></h4>
-                               <a href="<?php echo site_url('nuqueue/kelola_antrian_jadwal');?>/<?php echo $id_poli?>/<?php echo $key->id_jadwal?>" class="btn btn-primary">Kelola</a>
+                               <a href="<?php echo site_url('app/kelola_antrian_jadwal');?>/<?php echo $id_poli?>/<?php echo $key->id_jadwal?>" class="btn btn-primary">Kelola</a>
                             </div>
 
                         </div>
@@ -215,7 +215,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- END CONTAINER -->
         <!-- BEGIN FOOTER -->
         <div class="page-footer">
-            <div class="page-footer-inner"> NuQueue, 2018
+            <div class="page-footer-inner"> RS Sinar Kasih, 2020
                 <div class="scroll-to-top">
                     <i class="icon-arrow-up"></i>
                 </div>

@@ -6,7 +6,7 @@
                             echo 'nav-item';
                         }
                         ?>">
-                            <a href="<?php echo site_url('nuqueue/dashboard_cs');?>" class="nav-link nav-toggle">
+                            <a href="<?php echo site_url('app/dashboard_cs');?>" class="nav-link nav-toggle">
                                 <i class="icon-home"></i>
                                 <?php
                         if($this->uri->segment(2) == 'dashboard_cs'){
@@ -26,7 +26,7 @@
                             echo 'nav-item';
                         }
                         ?>">
-                            <a href="<?php echo site_url('nuqueue/kelola_antrian');?>" class="nav-link nav-toggle">
+                            <a href="<?php echo site_url('app/kelola_antrian');?>" class="nav-link nav-toggle">
                                 <i class="fa fa-users"></i>
                                 <?php
                         if($this->uri->segment(2) == 'kelola_antrian' || $this->uri->segment(2) == 'kelola_antrian_poli' || $this->uri->segment(2) == 'kelola_antrian_jadwal'){
@@ -44,7 +44,7 @@
                             echo 'nav-item';
                         }
                         ?>">
-                            <a href="<?php echo site_url('nuqueue/tampil_antrian');?>" class="nav-link nav-toggle">
+                            <a href="<?php echo site_url('app/tampil_antrian');?>" class="nav-link nav-toggle">
                                 <i class="fa fa-list-ol"></i>
                                 <?php
                         if($this->uri->segment(2) == 'tampil_antrian' || $this->uri->segment(2) == 'tampil_antrian_poli' || $this->uri->segment(2) == 'tampil_antrian_jadwal'){

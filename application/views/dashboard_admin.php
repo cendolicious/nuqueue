@@ -193,7 +193,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="page-breadcrumb">
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('nuqueue/dashboard_admin');?>">Home</a>
+                                <a href="<?php echo site_url('app/dashboard_admin');?>">Home</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
@@ -231,7 +231,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="<?php echo site_url('nuqueue/kelola_rs');?>" class="btn btn-primary">Kelola Rumah Sakit</a>
+                                    <a href="<?php echo site_url('app/kelola_rs');?>" class="btn btn-primary">Kelola Rumah Sakit</a>
                                 </div>
                             </div>
                         </div>
@@ -251,7 +251,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="<?php echo site_url('nuqueue/kelola_rs');?>" class="btn btn-primary">Kelola Rumah Sakit</a>
+                                    <a href="<?php echo site_url('app/kelola_rs');?>" class="btn btn-primary">Kelola Rumah Sakit</a>
                                 </div>
                             </div>
                         </div>
@@ -271,7 +271,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="<?php echo site_url('nuqueue/kelola_rs');?>" class="btn btn-primary">Kelola Rumah Sakit</a>
+                                    <a href="<?php echo site_url('app/kelola_rs');?>" class="btn btn-primary">Kelola Rumah Sakit</a>
                                 </div>
                             </div>
                         </div>
@@ -286,7 +286,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- END CONTAINER -->
         <!-- BEGIN FOOTER -->
         <div class="page-footer">
-            <div class="page-footer-inner"> NuQueue, 2018
+            <div class="page-footer-inner"> RS Sinar Kasih, 2020
                 <div class="scroll-to-top">
                     <i class="icon-arrow-up"></i>
                 </div>

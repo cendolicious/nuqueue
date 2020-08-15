@@ -156,11 +156,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="page-breadcrumb">
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('nuqueue/dashboard_rs');?>">Home</a>
+                                <a href="<?php echo site_url('app/dashboard_rs');?>">Home</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('nuqueue/kelola_jadwal');?>">Kelola Jadwal</a>
+                                <a href="<?php echo site_url('app/kelola_jadwal');?>">Kelola Jadwal</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
@@ -183,7 +183,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <span class="caption-subject font-green sbold uppercase">Sunting Jadwal</span>
                                     </div>
 
-                                   <form action="<?php echo site_url('Nuqueue/aksi_edit_jadwal') ?>" method="post">
+                                   <form action="<?php echo site_url('app/aksi_edit_jadwal') ?>" method="post">
             
                <div class="form-group col-md-12">
         <label class="control-label">Dokter</label>
@@ -299,7 +299,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- END CONTAINER -->
         <!-- BEGIN FOOTER -->
         <div class="page-footer">
-            <div class="page-footer-inner"> NuQueue, 2018
+            <div class="page-footer-inner"> RS Sinar Kasih, 2020
                 <div class="scroll-to-top">
                     <i class="icon-arrow-up"></i>
                 </div>

@@ -96,7 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
                                     <li>
-                                        <a href="<?php echo site_url('nuqueue/profil_rs');?>">
+                                        <a href="<?php echo site_url('app/profil_rs');?>">
                                             <i class="icon-user"></i>Profil Saya</a>
                                     </li>
                                     <li class="divider"> </li>
@@ -156,7 +156,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="page-breadcrumb">
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('nuqueue/dashboard_rs');?>">Home</a>
+                                <a href="<?php echo site_url('app/dashboard_rs');?>">Home</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
@@ -202,8 +202,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <?php echo $key->nama_poli?>
                                                 </td>
                                                <td>
-                                                   <a href="<?php echo site_url('Nuqueue/edit_dokter/'.$key->id_dokter) ?>" type="button" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                  <a href="<?php echo site_url('Nuqueue/hapus_dokter/'.$key->id_dokter) ?>" class="btn btn-danger" onClick="return confirm('Yakin ingin menghapus dokter ini?')"><i class="fa fa-trash"></i></a>
+                                                   <a href="<?php echo site_url('app/edit_dokter/'.$key->id_dokter) ?>" type="button" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+                  <a href="<?php echo site_url('app/hapus_dokter/'.$key->id_dokter) ?>" class="btn btn-danger" onClick="return confirm('Yakin ingin menghapus dokter ini?')"><i class="fa fa-trash"></i></a>
                                                </td>
                                             </tr>
                                             <?php
@@ -223,7 +223,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- END CONTAINER -->
         <!-- BEGIN FOOTER -->
         <div class="page-footer">
-            <div class="page-footer-inner"> NuQueue, 2018
+            <div class="page-footer-inner"> RS Sinar Kasih, 2020
                 <div class="scroll-to-top">
                     <i class="icon-arrow-up"></i>
                 </div>

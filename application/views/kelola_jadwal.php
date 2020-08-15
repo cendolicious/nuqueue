@@ -99,7 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
                                     <li>
-                                        <a href="<?php echo site_url('nuqueue/profil_rs');?>">
+                                        <a href="<?php echo site_url('app/profil_rs');?>">
                                             <i class="icon-user"></i>Profil Saya</a>
                                     </li>
                                     <li class="divider"> </li>
@@ -159,7 +159,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="page-breadcrumb">
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('nuqueue/dashboard_rs');?>">Home</a>
+                                <a href="<?php echo site_url('app/dashboard_rs');?>">Home</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
@@ -227,8 +227,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 </td>
                                                 <td> <?php echo substr($key->jammulai_poli, 0,5).' - '.substr($key->jamselesai_poli, 0,5); ?> </td>
                                                <td>
-                                                   <a href="<?php echo site_url('Nuqueue/edit_jadwal/'.$key->id_jadwal) ?>" type="button" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                  <a href="<?php echo site_url('Nuqueue/hapus_jadwal/'.$key->id_jadwal) ?>" class="btn btn-danger" onClick="return confirm('Yakin ingin menghapus jadwal ini?')"><i class="fa fa-trash"></i></a>    
+                                                   <a href="<?php echo site_url('app/edit_jadwal/'.$key->id_jadwal) ?>" type="button" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+                  <a href="<?php echo site_url('app/hapus_jadwal/'.$key->id_jadwal) ?>" class="btn btn-danger" onClick="return confirm('Yakin ingin menghapus jadwal ini?')"><i class="fa fa-trash"></i></a>    
                                                </td>
                                             </tr>
                                             <?php
@@ -248,7 +248,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- END CONTAINER -->
         <!-- BEGIN FOOTER -->
         <div class="page-footer">
-            <div class="page-footer-inner"> NuQueue, 2018
+            <div class="page-footer-inner"> RS Sinar Kasih, 2020
                 <div class="scroll-to-top">
                     <i class="icon-arrow-up"></i>
                 </div>
