@@ -43,6 +43,11 @@ class App extends CI_Controller {
 		
 	}
 
+	public function keluar()
+	{
+		session_destroy();
+	}
+
 	public function daftar_rs()
 	{
 		$nama_rs = $this->input->post('name');
@@ -963,5 +968,7 @@ $html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Te
 		
 		redirect('app/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal);
 	}
+
+
 
 }
