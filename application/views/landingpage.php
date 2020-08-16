@@ -147,11 +147,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header modal-lg">
-        <h5 id="ketlogin" class="modal-title">Masuk Sebagai..</h5>
+        <h5 id="ketlogin" class="modal-title">Masuk..</h5>
       </div>
       <div class="modal-body inmodal">
     
-        <div class="col-lg-12 text-center">
+        <!-- <div class="col-lg-12 text-center">
             <ul class="list-inline banner-social-buttons">
               <li id="loginadminrs" class="list-inline-item">
                 <a class="btn btn-default btn-lg">
@@ -167,7 +167,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </li>
               
             </ul>
-          </div>
+          </div> -->
 
           <div class="text-center">
             <div id="formloginadminrs">
@@ -199,7 +199,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="panel-heading" align="center">
                 </div>
                 <div class="panel-body">
-                <form role="form" action="<?php echo site_url('app/login_cs'); ?>" method="post">
+                <form role="form" action="<?php echo site_url('app/login'); ?>" method="post">
                    
 <strong><div class="text-left"><label>Username CS</label></div></strong>
                  <div class="form-group input-group">
@@ -252,20 +252,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
      });
 
         $('#formlogincs').hide();
-        $('#formloginadminrs').hide();
+        // $('#formloginadminrs').hide();
         $('#ketlogincs').hide();
         $('#ketloginrs').hide();
         
         $('#loginadminrs').click(function(){
             $('#formlogincs').slideUp();
             $('#ketlogin').text("Masuk sebagai Admin RS");
-            $('#formloginadminrs').slideDown();
+            // $('#formloginadminrs').slideDown();
             $('#loginadminrs').removeClass("btn-default");
             $('#logincs').removeClass("btn-success");
             $('#loginadminrs').addClass("btn-primary");
         });
         $('#logincs').click(function(){
-            $('#formloginadminrs').slideUp();
+            // $('#formloginadminrs').slideUp();
             $('#ketlogin').text("Masuk sebagai CS");
             $('#formlogincs').slideDown();
             $('#logincs').removeClass("btn-default");

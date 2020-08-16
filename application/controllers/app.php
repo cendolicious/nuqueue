@@ -35,9 +35,9 @@ class App extends CI_Controller {
 			// $this->session->set_userdata('telepon_rs',$getDataRS->telepon_rs);
 			
 				if ($email_rs ==  'admin@rssinarkasih.com') {
-					redirect('app/dashboard_admin');
-				}else{
 					redirect('app/dashboard_rs');
+				}else{
+					redirect('app/dashboard_cs');
 				}
 		}
 		
@@ -591,26 +591,26 @@ class App extends CI_Controller {
 	//CS PLAYGROUND
 	//////////////////
 
-	public function login_cs()
-	{
-		$username_cs = $this->input->post('username_cs');
-		$pass_cs  = $this->input->post('password_cs');
-		$getDataCS = $this->db->get_where('cs',array('username_cs' => $username_cs, 'password_cs' => $pass_cs))->row();
+	// public function login_cs()
+	// {
+	// 	$username_cs = $this->input->post('username_cs');
+	// 	$pass_cs  = $this->input->post('password_cs');
+	// 	$getDataCS = $this->db->get_where('cs',array('username_cs' => $username_cs, 'password_cs' => $pass_cs))->row();
 
-		if (empty($getDataCS)) {
-				$this->load->view('landingpage');
-		echo "<div style='padding-top:1cm;color:white;'><b><center>Username/Password salah!</center></b></div>";
-		}else{
-			$this->session->set_userdata('id_cs',$getDataCS->id_cs);
-			$this->session->set_userdata('nama_cs',$getDataCS->nama_cs);
-			$this->session->set_userdata('username_cs',$getDataCS->username_cs);
-			$this->session->set_userdata('password_cs',$getDataCS->password_cs);
-			$this->session->set_userdata('id_rs',$getDataCS->id_rs);
+	// 	if (empty($getDataCS)) {
+	// 			$this->load->view('landingpage');
+	// 	echo "<div style='padding-top:1cm;color:white;'><b><center>Username/Password salah!</center></b></div>";
+	// 	}else{
+	// 		$this->session->set_userdata('id_cs',$getDataCS->id_cs);
+	// 		$this->session->set_userdata('nama_cs',$getDataCS->nama_cs);
+	// 		$this->session->set_userdata('username_cs',$getDataCS->username_cs);
+	// 		$this->session->set_userdata('password_cs',$getDataCS->password_cs);
+	// 		$this->session->set_userdata('id_rs',$getDataCS->id_rs);
 	
-			redirect('app/dashboard_cs');
-		}
+	// 		redirect('app/dashboard_cs');
+	// 	}
 		
-	}
+	// }
 
 	public function dashboard_cs()
 	{
