@@ -142,7 +142,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <ul class="dropdown-menu dropdown-menu-default">
                                    
                                     <li>
-                                        <a href="<?php echo site_url();?>">
+                                        <a href="<?php echo site_url('app/keluar');?>">
                                             <i class="icon-key"></i>Keluar</a>
                                     </li>
                                 </ul>
