@@ -30,7 +30,7 @@ class App extends CI_Controller {
 		}else{ 
 			$this->session->set_userdata('email_rs',$getDataRS->email);
 			// $this->session->set_userdata('nama_rs',$getDataRS->nama_rs);
-			$this->session->set_userdata('id_users',$getDataRS->id);
+			$this->session->set_userdata('id_users',$getDataRS->id_users);
 			$this->session->set_userdata('fullname',$getDataRS->fullname);
 			// $this->session->set_userdata('alamat_rs',$getDataRS->alamat_rs);
 			// $this->session->set_userdata('telepon_rs',$getDataRS->telepon_rs);
@@ -621,14 +621,14 @@ class App extends CI_Controller {
 
 	public function dashboard_cs()
 	{
-		// $where = array(
-		// 		'id_cs' => $this->session->userdata('id_cs')
-		// 	);
-		// $where2 = array(
-		// 	'id_rs' => $this->session->userdata('id_rs') 
-		// );
-		$data['data_cs'] = $this->crud_m->ambilData('tbl_user');
- 		$data['data_rs'] = $this->crud_m->ambilData('tbl_profil_rumah_sakit',1);
+		$where = array(
+		 		'id_users' => $this->session->userdata('id_users')
+		);
+		$where2 = array(
+			'id' => 1 
+		);
+		$data['data_cs'] = $this->crud_m->ambilData('tbl_user', $where);
+ 		$data['data_rs'] = $this->crud_m->ambilData('tbl_profil_rumah_sakit',$where2);
  		$this->load->view('dashboard_cs',$data);
 	}
 
