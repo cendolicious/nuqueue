@@ -73,13 +73,18 @@ class crud_m extends CI_model
 
      public function getAllDoctorByIDRS($id_rs)
     {
-        $query = "SELECT d.*,p.nama_poli FROM dokter as d INNER JOIN poliklinik as p ON d.id_poli = p.id_poli WHERE d.id_rs = $id_rs";
+        $query = "SELECT d.*,p.nama_poli 
+                    FROM dokter as d 
+                    INNER JOIN poliklinik as p ON d.id_poli = p.id_poli";
         return $this->db->query($query);
     }
 
     public function getAllJadwalByIDRS($id_rs)
     {
-        $query = "SELECT j.*,p.nama_poli,d.nama_dokter FROM (jadwal as j INNER JOIN dokter as d ON j.id_dokter = d.id_dokter) INNER JOIN poliklinik as p ON p.id_poli = j.  id_poli WHERE j.id_rs = $id_rs";
+        $query = "SELECT j.*,p.nama_poli,d.nama_dokter 
+                    FROM (jadwal as j 
+                    INNER JOIN dokter as d ON j.id_dokter = d.id_dokter) 
+                    INNER JOIN poliklinik as p ON p.id_poli = j.id_poli";
         return $this->db->query($query);
     }
 

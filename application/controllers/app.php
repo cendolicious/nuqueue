@@ -22,19 +22,19 @@ class App extends CI_Controller {
 	{
 		$email_rs = $this->input->post('email');
 		$pass_rs  = $this->input->post('password');
-		$getDataRS = $this->db->get_where('rumahsakit',array('email_rs' => $email_rs, 'password_rs' => $pass_rs))->row();
+		$getDataRS = $this->db->get_where('tbl_user',array('email' => $email_rs, 'password' => md5($pass_rs)))->row();
 
 		if (empty($getDataRS)) {
 				$this->load->view('landingpage');
 		echo "<div style='padding-top:1cm;color:white;'><b><center>Email/Password salah!</center></b></div>";
-		}else{
+		}else{ 
 			$this->session->set_userdata('email_rs',$getDataRS->email_rs);
-			$this->session->set_userdata('nama_rs',$getDataRS->nama_rs);
-			$this->session->set_userdata('id_rs',$getDataRS->id_rs);
-			$this->session->set_userdata('alamat_rs',$getDataRS->alamat_rs);
-			$this->session->set_userdata('telepon_rs',$getDataRS->telepon_rs);
+			// $this->session->set_userdata('nama_rs',$getDataRS->nama_rs);
+			// $this->session->set_userdata('id_rs',$getDataRS->id_rs);
+			// $this->session->set_userdata('alamat_rs',$getDataRS->alamat_rs);
+			// $this->session->set_userdata('telepon_rs',$getDataRS->telepon_rs);
 			
-				if ($email_rs == 'admin@nuqueue.com') {
+				if ($email_rs ==  'admin@rssinarkasih.com') {
 					redirect('app/dashboard_admin');
 				}else{
 					redirect('app/dashboard_rs');
@@ -284,7 +284,7 @@ class App extends CI_Controller {
 		$data['data_jadwal'] = $this->crud_m->ambilData('jadwal',$where);
 		$data['data_cs']= $this->crud_m->ambilData('cs',$where);
 
-		$data['dokter'] = $this->crud_m->getAllDoctorByIDRS($this->session->userdata('id_rs'));
+		$data['dokter'] = $this->crud_m->getAllDoctor();
 		$this->load->view('kelola_dokter',$data);
 	}
 
