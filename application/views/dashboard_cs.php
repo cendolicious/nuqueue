@@ -84,7 +84,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="dropdown dropdown-user">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                     <span class="username username-hide-on-mobile"> <?php
-                                    $nama_cs = $this->session->userdata('nama_cs');
+                                    $nama_cs = $this->session->userdata('fullname');
                                     echo $nama_cs;
                                     ?> </span>
                                     <i class="fa fa-angle-down"></i>
@@ -161,7 +161,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="dashboard-stat2">
                                 <?php
                                     foreach ($data_rs->result() as $key) {
-                                        $nama_rs = $key->nama_rs;
+                                        $nama_rs = $key->nama_rumah_sakit;
                                     }
                                 ?>
                                <h3>Selamat Datang, <?php echo $nama_cs?>!</h3>

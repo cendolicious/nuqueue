@@ -31,6 +31,7 @@ class App extends CI_Controller {
 			$this->session->set_userdata('email_rs',$getDataRS->email);
 			// $this->session->set_userdata('nama_rs',$getDataRS->nama_rs);
 			$this->session->set_userdata('id_users',$getDataRS->id);
+			$this->session->set_userdata('fullname',$getDataRS->fullname);
 			// $this->session->set_userdata('alamat_rs',$getDataRS->alamat_rs);
 			// $this->session->set_userdata('telepon_rs',$getDataRS->telepon_rs);
 			

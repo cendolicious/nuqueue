@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="dropdown dropdown-user">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                     <span class="username username-hide-on-mobile"> <?php
-                                    $nama_cs = $this->session->userdata('nama_cs');
+                                    $nama_cs = $this->session->userdata('fullname');
                                     echo $nama_cs;
                                     ?> </span>
                                     <i class="fa fa-angle-down"></i>
