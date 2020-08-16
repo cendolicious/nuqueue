@@ -28,9 +28,9 @@ class App extends CI_Controller {
 				$this->load->view('landingpage');
 		echo "<div style='padding-top:1cm;color:white;'><b><center>Email/Password salah!</center></b></div>";
 		}else{ 
-			$this->session->set_userdata('email_rs',$getDataRS->email_rs);
+			$this->session->set_userdata('email_rs',$getDataRS->email);
 			// $this->session->set_userdata('nama_rs',$getDataRS->nama_rs);
-			// $this->session->set_userdata('id_rs',$getDataRS->id_rs);
+			$this->session->set_userdata('id_users',$getDataRS->id);
 			// $this->session->set_userdata('alamat_rs',$getDataRS->alamat_rs);
 			// $this->session->set_userdata('telepon_rs',$getDataRS->telepon_rs);
 			
@@ -131,11 +131,11 @@ class App extends CI_Controller {
 		$where = array(
 				'id_rs' => $this->session->userdata('id_rs')
 			);
-		$data['user_rs'] = $this->crud_m->ambilData('rumahsakit',$where);
-		$data['data_poli'] = $this->crud_m->ambilData('poliklinik',$where);
-		$data['data_dokter'] = $this->crud_m->ambilData('dokter',$where);
-		$data['data_jadwal'] = $this->crud_m->ambilData('jadwal',$where);
-		$data['data_cs']= $this->crud_m->ambilData('cs',$where);
+		// $data['user_rs'] = $this->crud_m->ambilData('rumahsakit',$where);
+		$data['data_poli'] = $this->crud_m->ambilData('tbl_poli',$where);
+		$data['data_dokter'] = $this->crud_m->ambilData('tbl_dokter',$where);
+		$data['data_jadwal'] = $this->crud_m->ambilData('tbl_jadwal_praktek_dokter',$where);
+		$data['data_cs']= $this->crud_m->ambilData('tbl_user',$where);
  		$this->load->view('dashboard_rs',$data);
 	}
 
@@ -614,14 +614,14 @@ class App extends CI_Controller {
 
 	public function dashboard_cs()
 	{
-		$where = array(
-				'id_cs' => $this->session->userdata('id_cs')
-			);
-		$where2 = array(
-			'id_rs' => $this->session->userdata('id_rs') 
-		);
-		$data['data_cs'] = $this->crud_m->ambilData('cs',$where);
- 		$data['data_rs'] = $this->crud_m->ambilData('rumahsakit',$where2);
+		// $where = array(
+		// 		'id_cs' => $this->session->userdata('id_cs')
+		// 	);
+		// $where2 = array(
+		// 	'id_rs' => $this->session->userdata('id_rs') 
+		// );
+		$data['data_cs'] = $this->crud_m->ambilData('tbl_user',$where);
+ 		// $data['data_rs'] = $this->crud_m->ambilData('rumahsakit',$where2);
  		$this->load->view('dashboard_cs',$data);
 	}
 
