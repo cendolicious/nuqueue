@@ -621,7 +621,7 @@ class App extends CI_Controller {
 		// 	'id_rs' => $this->session->userdata('id_rs') 
 		// );
 		$data['data_cs'] = $this->crud_m->ambilData('tbl_user');
- 		// $data['data_rs'] = $this->crud_m->ambilData('rumahsakit',$where2);
+ 		$data['data_rs'] = $this->crud_m->ambilData('tbl_profil_rumah_sakit',1);
  		$this->load->view('dashboard_cs',$data);
 	}
 
