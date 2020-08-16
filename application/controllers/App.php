@@ -46,6 +46,7 @@ class App extends CI_Controller {
 	public function keluar()
 	{
 		session_destroy();
+		redirect('');
 	}
 
 	public function daftar_rs()
