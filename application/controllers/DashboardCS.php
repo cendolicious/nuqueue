@@ -87,10 +87,10 @@ class DashboardCS extends CI_Controller {
 		foreach ($resultquery3->result() as $row2) {
 			$html .= 'Poli '.$row2->nama_poliklinik.' - ';
 		}
-		$html .= ''.$row->tgl_antrian.'</div>';
+		$html .= ''.$row->tgl_periksa.'</div>';
 		$html .= '<hr><hr><hr>';
 		$html .= '<br><br><h6 style="color:black;text-align:center;">Pasien dengan NIK '.$row->nik.' telah terdaftar dengan </h6>';
-		$html .= '<br><br><h2 style="color:black;text-align:center;"> No. Antrian : '.$row->no_periksa.'</h2>';
+		$html .= '<br><br><h2 style="color:black;text-align:center;"> No. Antrian : '.$row->no_antrian.'</h2>';
 		
 
 		$html .= '<br><hr><hr><hr><br>';
