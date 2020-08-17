@@ -131,7 +131,11 @@ class crud_m extends CI_model
     {
         date_default_timezone_set('Asia/Jakarta');
         $datename=date('D');
-        $query = "SELECT * FROM jadwal as j INNER JOIN dokter as d ON j.id_dokter = d.id_dokter WHERE j.id_poli = $id_poli AND jadwal_poli = '$datename'" ;
+        $query = "SELECT * 
+                    FROM tbl_jadwal_praktek_dokter as j 
+                    INNER JOIN tbl_dokter as d ON j.kode_dokter = d.kode_dokter 
+                    WHERE j.id_poliklinik = $id_poli 
+                        AND hari = '$datename'" ;
         return $this->db->query($query);
     }
 

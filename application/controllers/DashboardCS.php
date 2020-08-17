@@ -45,11 +45,10 @@ class DashboardCS extends CI_Controller {
 		$data['data_poli'] = $this->crud_m->ambilData('tbl_poliklinik');
 		$data['data_jadwal'] = $this->crud_m->getJadwalWithDokter($id_poli);
 
-
 		$where2 = array(
-				'id_rs' => $this->session->userdata('id_rs')
-			);
-		$data['data_rs'] = $this->crud_m->ambilData('rumahsakit',$where2);	
+			'id' => 1 
+		);
+			$data['data_rs'] = $this->crud_m->ambilData('tbl_profil_rumah_sakit',$where2);	
 		$this->load->view('kelola_antrian_pilih_jadwal',$data);
 	}
 
