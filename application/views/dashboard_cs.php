@@ -45,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="page-header-inner ">
                 <!-- BEGIN LOGO -->
                 <div class="page-logo">
-                    <img src="<?php echo base_url(); ?>assets/layouts/layout2/img/LogoKlinik.png" alt="logo" class="logo-default" />
+                    <img src="<?php echo base_url(); ?>assets/layouts/layout2/img/logoklinik.png" alt="logo" class="logo-default" />
                     <div class="menu-toggler sidebar-toggler">
                         <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
                     </div>
@@ -167,7 +167,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                <h3>Selamat Datang, <?php echo $nama_cs?>!</h3>
                                <p>Anda terdaftar sebagai Customer Service di <?php echo $nama_rs ?></p>
                                <a href="kelola_antrian" class="btn btn-primary">Kelola Antrian</a>
-                               <a href="tampil_antrian" class="btn btn-primary">Tampilkan Antrian</a>
                             </div>
 
                         </div>
