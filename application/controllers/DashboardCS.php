@@ -144,11 +144,9 @@ class DashboardCS extends CI_Controller
 
 	public function tampil_antrian()
 	{
-		$where = array(
-			'id_rs' => $this->session->userdata('id_rs')
-		);
 
-		$data['data_poli'] = $this->crud_m->ambilData('poliklinik', $where);
+
+		$data['data_poli'] = $this->crud_m->ambilData('tbl_poliklinik');
 
 		$this->load->view('tampil_antrian_pilih_poli', $data);
 	}
@@ -158,16 +156,16 @@ class DashboardCS extends CI_Controller
 		$data['id_poli'] = $id_poli;
 		$this->session->set_userdata('id_poli', $id_poli);
 		$where = array(
-			'id_poli' => $id_poli
+			'id_poliklinik' => $id_poli
 		);
-		$data['data_poli'] = $this->crud_m->ambilData('poliklinik', $where);
+		$data['data_poli'] = $this->crud_m->ambilData('tbl_poliklinik', $where);
 		$data['data_jadwal'] = $this->crud_m->getJadwalWithDokter($id_poli);
 
 
 		$where2 = array(
-			'id_rs' => $this->session->userdata('id_rs')
+			'id' => 1
 		);
-		$data['data_rs'] = $this->crud_m->ambilData('rumahsakit', $where2);
+		$data['data_rs'] = $this->crud_m->ambilData('tbl_profil_rumah_sakit', $where2);
 		$this->load->view('tampil_antrian_pilih_jadwal', $data);
 	}
 
@@ -176,21 +174,21 @@ class DashboardCS extends CI_Controller
 		$where = array(
 			'id_jadwal' => $id_jadwal
 		);
-		$data['data_antrian'] = $this->crud_m->ambilData('antrian', $where);
+		$data['data_antrian'] = $this->crud_m->ambilData('tbl_antrian', $where);
 
 		$where2 = array(
-			'id_poli' => $id_poli
+			'id_poliklinik' => $id_poli
 		);
-		$data['data_poli'] = $this->crud_m->ambilData('poliklinik', $where2);
+		$data['data_poli'] = $this->crud_m->ambilData('tbl_poliklinik', $where2);
 
 		$where3 = array(
-			'id_rs' => $this->session->userdata('id_rs')
+			'id' => 1
 		);
-		$data['data_rs'] = $this->crud_m->ambilData('rumahsakit', $where3);
+		$data['data_rs'] = $this->crud_m->ambilData('tbl_profil_rumah_sakit', $where3);
 
 		$data['data_jadwal'] = $this->crud_m->getJadwalWithDokterAndPoli($id_poli, $id_jadwal);
 
-		$data['jml_antrian'] = $this->crud_m->getJmlAntrian($this->session->userdata('id_rs'), $id_poli, $id_jadwal);
+		$data['jml_antrian'] = $this->crud_m->getJmlAntrian($ $id_poli, $id_jadwal);
 
 		$data['data_list_antrian'] = $this->crud_m->listDataAntrian($id_jadwal);
 		$data['data_antrian_saat_ini'] = $this->crud_m->antrianSaatIni($id_jadwal);
