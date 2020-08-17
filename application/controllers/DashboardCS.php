@@ -252,6 +252,7 @@ class DashboardCS extends CI_Controller {
 
 		$id_poli = $this->input->post('id_poli');
 		$id_jadwal = $this->input->post('id_jadwal');
+		$kode_poli = $this->input->post('kode_poli');
 		$tipe_daftar = $this->input->post('tipe_daftar');
 
 		$getJmlAntrian = $this->crud_m->getJmlAntrian($id_poli,$id_jadwal);
@@ -268,7 +269,7 @@ class DashboardCS extends CI_Controller {
 		$data2 = array(
 		"id_poli" => $id_poli,
 		"id_jadwal" => $id_jadwal,
-		"no_antrian" => $today.'-'.$id_rs.$id_poli.$id_jadwal.'-'.$no_antrian,
+		"no_antrian" => $kode_poli.'-'.$no_antrian,
 		"tipe_daftar" => $tipe_daftar,
 		"no_nik" => $nik_pasien
 		);

@@ -147,6 +147,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     foreach ($data_poli->result() as $key) {
                         $nama_poli = $key->nama_poliklinik;
                         $id_poli = $key->id_poliklinik;
+                        $kode_poli = $key->BPJS_kode_poli;
                     }
 
                     foreach ($data_rs->result() as $key) {
