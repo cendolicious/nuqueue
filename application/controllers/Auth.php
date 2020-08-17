@@ -38,7 +38,7 @@ class Auth extends CI_Controller {
 				if ($email_rs ==  'admin@rssinarkasih.com') {
 					redirect('app/dashboard_rs');
 				}else{
-					redirect('dashboardcs');
+					redirect('dashboardCS/dashboard_cs');
 				}
 		}
 		

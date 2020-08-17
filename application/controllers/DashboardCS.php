@@ -10,35 +10,10 @@ class DashboardCS extends CI_Controller {
 		$this->load->model('crud_m');
     }
 
-    /////////////////////////
-	//LANDINGPAGE PLAYGROUND
-	////////////////////////
-
 	public function index()
 	{
 		$this->load->view('dashboard_cs');
 	}
-
-	// public function login_cs()
-	// {
-	// 	$username_cs = $this->input->post('username_cs');
-	// 	$pass_cs  = $this->input->post('password_cs');
-	// 	$getDataCS = $this->db->get_where('cs',array('username_cs' => $username_cs, 'password_cs' => $pass_cs))->row();
-
-	// 	if (empty($getDataCS)) {
-	// 			$this->load->view('landingpage');
-	// 	echo "<div style='padding-top:1cm;color:white;'><b><center>Username/Password salah!</center></b></div>";
-	// 	}else{
-	// 		$this->session->set_userdata('id_cs',$getDataCS->id_cs);
-	// 		$this->session->set_userdata('nama_cs',$getDataCS->nama_cs);
-	// 		$this->session->set_userdata('username_cs',$getDataCS->username_cs);
-	// 		$this->session->set_userdata('password_cs',$getDataCS->password_cs);
-	// 		$this->session->set_userdata('id_rs',$getDataCS->id_rs);
-	
-	// 		redirect('app/dashboard_cs');
-	// 	}
-		
-	// }
 
 	public function dashboard_cs()
 	{
