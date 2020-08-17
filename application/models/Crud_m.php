@@ -94,7 +94,7 @@ class crud_m extends CI_model
         return $this->db->query($query);
     }
 
-    public function getJmlAntrian($id_rs,$id_poli,$id_jadwal)
+    public function getJmlAntrian($id_poli,$id_jadwal)
     {
         date_default_timezone_set('Asia/Jakarta');
         $today_date = date("Y-m-d");
