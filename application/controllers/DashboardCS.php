@@ -188,7 +188,7 @@ class DashboardCS extends CI_Controller
 
 		$data['data_jadwal'] = $this->crud_m->getJadwalWithDokterAndPoli($id_poli, $id_jadwal);
 
-		$data['jml_antrian'] = $this->crud_m->getJmlAntrian($ $id_poli, $id_jadwal);
+		$data['jml_antrian'] = $this->crud_m->getJmlAntrian($id_poli, $id_jadwal);
 
 		$data['data_list_antrian'] = $this->crud_m->listDataAntrian($id_jadwal);
 		$data['data_antrian_saat_ini'] = $this->crud_m->antrianSaatIni($id_jadwal);
