@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="page-header-inner ">
                 <!-- BEGIN LOGO -->
                 <div class="page-logo">
-                    <img src="<?php echo base_url(); ?>assets/layouts/layout2/img/logoklinik.png" alt="logo" class="logo-default" />
+                    <img src="<?php echo base_url(); ?>assets/layouts/layout2/img/LogoKliniks.png" alt="logo" class="logo-default" />
                     <div class="menu-toggler sidebar-toggler">
                         <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
                     </div>
