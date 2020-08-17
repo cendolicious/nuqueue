@@ -260,8 +260,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
                                 </div>
                                 <div class="portlet-body text-center">
-                                     <form action="<?php echo site_url('app/panggil_antrian') ?>" method="post">
-                                        <input type="hidden" name="id_rs" value="<?php echo $id_rs;?>"/>
+                                     <form action="<?php echo site_url('dashboardCS/panggil_antrian') ?>" method="post">
               <input type="hidden" name="id_poli" value="<?php echo $id_poli;?>"/>
               <input type="hidden" name="id_jadwal" value="<?php echo $id_jadwal;?>"/>
 
