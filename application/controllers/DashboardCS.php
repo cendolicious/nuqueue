@@ -320,7 +320,7 @@ $html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Te
 		$name = '/TIKET-'.$today.'-'.$id_rs.$id_poli.$id_jadwal.'-'.$no_antrian.'.pdf';
 		$dest = 'I'; //'I','F','D'
 		$pdf->Output($name,$dest);*/
-		redirect('app/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal.'/1');
+		redirect('dashboardCS/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal.'/1');
 		
 	}
 
