@@ -175,7 +175,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="panel-heading" align="center">
                 </div>
                 <div class="panel-body">
-                <form role="form" action="<?php echo site_url('app/login'); ?>" method="post">
+                <form role="form" action="<?php echo site_url('auth'); ?>" method="post">
                    
                 <strong><div class="text-left"><label>Email</label></div></strong>
                  <div class="form-group input-group">
@@ -199,7 +199,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="panel-heading" align="center">
                 </div>
                 <div class="panel-body">
-                <form role="form" action="<?php echo site_url('app/login'); ?>" method="post">
+                <form role="form" action="<?php echo site_url('auth'); ?>" method="post">
                    
 <strong><div class="text-left"><label>Username CS</label></div></strong>
                  <div class="form-group input-group">
