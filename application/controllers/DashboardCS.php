@@ -120,7 +120,7 @@ class DashboardCS extends CI_Controller {
 		$data['data_antrian'] = $this->crud_m->ambilData('tbl_antrian',$where);
 
 		$where2 = array(
-				'id_poli' => $id_poli
+				'id_poli' => $id_poliklinik
 			);
 		$data['data_poli'] = $this->crud_m->ambilData('tbl_poliklinik',$where2);
 
