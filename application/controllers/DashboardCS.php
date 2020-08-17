@@ -56,11 +56,12 @@ class DashboardCS extends CI_Controller {
 	{
 
 		if ($after != NULL) {
-			$query = "SELECT * FROM antrian ORDER BY id_antrian DESC LIMIT 1";
+			$query = "SELECT * FROM tbl_antrian ORDER BY id_antrian DESC LIMIT 1";
 			$resultquery = $this->db->query($query);
+
 		foreach ($resultquery->result() as $row) {
 
-			$this->load->library('tcpdf/tcpdf');
+		$this->load->library('tcpdf/tcpdf');
 
 		$pdf = new tcpdf();
 		$orientation = 'L'; //'L';
@@ -116,24 +117,24 @@ class DashboardCS extends CI_Controller {
 		$where = array(
 				'id_jadwal' => $id_jadwal
 			);
-		$data['data_antrian'] = $this->crud_m->ambilData('antrian',$where);
+		$data['data_antrian'] = $this->crud_m->ambilData('tbl_antrian',$where);
 
 		$where2 = array(
 				'id_poli' => $id_poli
 			);
-		$data['data_poli'] = $this->crud_m->ambilData('poliklinik',$where2);
-
-		$where3 = array(
-				'id_rs' => $this->session->userdata('id_rs')
-			);
-		$data['data_rs'] = $this->crud_m->ambilData('rumahsakit',$where3);
+		$data['data_poli'] = $this->crud_m->ambilData('tbl_poliklinik',$where2);
 
 		$data['data_jadwal'] = $this->crud_m->getJadwalWithDokterAndPoli($id_poli,$id_jadwal);
 
-		$data['jml_antrian'] = $this->crud_m->getJmlAntrian($this->session->userdata('id_rs'),$id_poli,$id_jadwal);
+		$data['jml_antrian'] = $this->crud_m->getJmlAntrian($id_poli,$id_jadwal);
 
 		$data['data_list_antrian'] = $this->crud_m->listDataAntrian($id_jadwal);
 		$data['data_antrian_saat_ini'] = $this->crud_m->antrianSaatIni($id_jadwal);
+
+		$where2 = array(
+			'id' => 1 
+		);
+			$data['data_rs'] = $this->crud_m->ambilData('tbl_profil_rumah_sakit',$where2);	
 		
 		$this->load->view('kelola_antrian',$data);
 	}

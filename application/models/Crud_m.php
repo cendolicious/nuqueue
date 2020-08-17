@@ -98,7 +98,7 @@ class crud_m extends CI_model
     {
         date_default_timezone_set('Asia/Jakarta');
         $today_date = date("Y-m-d");
-        $query = "SELECT COUNT(*) as jml_antrian FROM `antrian` WHERE id_rs = $id_rs AND id_poli = $id_poli AND id_jadwal = $id_jadwal AND tgl_antrian LIKE '$today_date%'";
+        $query = "SELECT COUNT(*) as jml_antrian FROM `tbl_antrian` WHERE  id_poli = $id_poli AND id_jadwal = $id_jadwal AND tgl_periksa LIKE '$today_date%'";
         return $this->db->query($query);
     }
 
@@ -141,7 +141,9 @@ class crud_m extends CI_model
 
     public function getJadwalWithDokterAndPoli($id_poli,$id_jadwal)
     {
-        $query = "SELECT * FROM jadwal as j INNER JOIN dokter as d ON j.id_dokter = d.id_dokter WHERE j.id_poli = $id_poli AND j.id_jadwal = $id_jadwal" ;
+        $query = "SELECT * FROM tbl_jadwal_praktek_dokter as j 
+                   INNER JOIN tbl_dokter as d ON j.kode_dokter = d.kode_dokter 
+                   WHERE j.id_poli = $id_poli AND j.id_jadwal = $id_jadwal" ;
         return $this->db->query($query);
     }
 

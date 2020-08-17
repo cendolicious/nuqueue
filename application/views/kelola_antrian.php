@@ -145,23 +145,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <!-- END THEME PANEL -->
                   <?php
                     foreach ($data_poli->result() as $key) {
-                        $nama_poli = $key->nama_poli;
-                        $id_poli = $key->id_poli;
+                        $nama_poli = $key->nama_poliklinik;
+                        $id_poli = $key->id_poliklinik;
                     }
+
                     foreach ($data_rs->result() as $key) {
-                        $nama_rs = $key->nama_rs;
-                        $id_rs = $key->id_rs;
-                        $url_api = $key->url_api;
+                        $nama_rs = $key->nama_rumah_sakit;
                     }
+
                     foreach ($data_jadwal->result() as $key) {
                         $id_jadwal = $key->id_jadwal;
-                        $jammulai_poli = $key->jammulai_poli;
-                        $jamselesai_poli = $key->jamselesai_poli;
+                        $jammulai_poli = $key->jam_mulai;
+                        $jamselesai_poli = $key->jam_selesai;
                         $nama_dokter = $key->nama_dokter;
                     }
                   ?>
                     
-                    <h3 style="margin-top:0px;">Kelola Antrian <?php echo $nama_poli;?> (<?php echo substr($jammulai_poli,0,5).' - '.substr($jamselesai_poli,0,5)?>) di <?php echo $nama_rs?> oleh <?php echo $nama_dokter?></h3>
+                    <h3 style="margin-top:0px;">Kelola Antrian <?php echo $nama_poli;?> (<?php echo $jammulai_poli.' - '.$jamselesai_poli?>) di <?php echo $nama_rs ?> oleh <?php echo $nama_dokter?></h3>
                     
                    
                     <div class="page-bar">
