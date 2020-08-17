@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class App extends CI_Controller {
+class Login extends CI_Controller {
 
 	public function __construct()
     {
@@ -38,7 +38,7 @@ class App extends CI_Controller {
 				if ($email_rs ==  'admin@rssinarkasih.com') {
 					redirect('app/dashboard_rs');
 				}else{
-					redirect('app/dashboard_cs');
+					redirect('dashboardcs');
 				}
 		}
 		
