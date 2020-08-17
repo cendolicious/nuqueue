@@ -30,11 +30,7 @@ class DashboardCS extends CI_Controller {
 
 	public function kelola_antrian()
 	{
-		$where = array(
-				'id_rs' => $this->session->userdata('id_rs')
-			);
-
-		$data['data_poli'] = $this->crud_m->ambilData('poliklinik',$where);
+		$data['data_poli'] = $this->crud_m->ambilData('tbl_poliklinik');
 
 		$this->load->view('kelola_antrian_pilih_poli',$data);
 	}
@@ -46,7 +42,7 @@ class DashboardCS extends CI_Controller {
 		$where = array(
 				'id_poli' => $id_poli
 			);
-		$data['data_poli'] = $this->crud_m->ambilData('poliklinik',$where);
+		$data['data_poli'] = $this->crud_m->ambilData('tbl_poliklinik');
 		$data['data_jadwal'] = $this->crud_m->getJadwalWithDokter($id_poli);
 
 

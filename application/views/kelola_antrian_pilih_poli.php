@@ -163,8 +163,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <div class="dashboard-stat2 text-center">
                                 
-                               <h2><?php echo $key->nama_poli ?></h2>
-                               <a href="kelola_antrian_poli/<?php echo $key->id_poli?>" class="btn btn-primary">Kelola</a>
+                               <h2><?php echo $key->nama_poliklinik ?></h2>
+                               <a href="kelola_antrian_poli/<?php echo $key->id_poliklinik?>" class="btn btn-primary">Kelola</a>
                             </div>
 
                         </div>
