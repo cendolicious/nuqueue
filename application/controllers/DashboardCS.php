@@ -329,7 +329,6 @@ $html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Te
 	public function panggil_antrian()
 	{
 
-		$id_rs = $this->input->post('id_rs');
 		$id_poli = $this->input->post('id_poli');
 		$id_jadwal = $this->input->post('id_jadwal');
 		$no_antrian_selanjutnya = $this->input->post('no_antrian_selanjutnya');
@@ -344,7 +343,7 @@ $html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Te
 		$cekAntrianSaatIni = $this->crud_m->cekAntrianSaatIni($id_jadwal);
 
 		if (empty($cekAntrianSaatIni->result())) {
-			$this->crud_m->updateData('antrian', $data, $where);
+			$this->crud_m->updateData('tbl_antrian', $data, $where);
 		} else {
 			foreach ($cekAntrianSaatIni->result() as $key) {
 				$antrian_saat_ini = $key->no_antrian;
@@ -355,11 +354,11 @@ $html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Te
 			$where2 = array(
 				'no_antrian' => $antrian_saat_ini
 			);
-			$this->crud_m->updateData('antrian', $data2, $where2);
-			$this->crud_m->updateData('antrian', $data, $where);
+			$this->crud_m->updateData('tbl_antrian', $data2, $where2);
+			$this->crud_m->updateData('tbl_antrian', $data, $where);
 		}
 
 
-		redirect('app/kelola_antrian_jadwal/' . $id_poli . '/' . $id_jadwal);
+		redirect('dashboardCS/kelola_antrian_jadwal/' . $id_poli . '/' . $id_jadwal);
 	}
 }
