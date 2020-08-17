@@ -12,7 +12,7 @@
        <div class="modal-body">
 <div class="bootbox-body row">
 
-<div class="col-lg-12 text-center">
+<!-- <div class="col-lg-12 text-center">
             <ul class="list-inline">
               <li id="pasienlama" class="list-inline-item">
                 <a class="btn btn-default btn-lg">
@@ -26,10 +26,10 @@
               </li>
               
             </ul>
-          </div>
+          </div> -->
 
 
-          <div id="formpasienbaru">
+          <!-- <div id="formpasienbaru">
             
            <form action="<?php echo site_url('app/pasien_baru_onsite') ?>" method="post">
             <input type="hidden" name="tipe_daftar" value="2"/>
@@ -81,7 +81,7 @@
                  <button id="btnPasienBaru" type="submit" class="btn btn-primary col-md-12">Daftar</button></div>
              </div>
          </form>
-       </div>
+       </div> -->
 
        <div id="formpasienlama">
         <form action="<?php echo site_url('app/pasien_lama_onsite') ?>" method="post">
