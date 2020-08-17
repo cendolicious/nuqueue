@@ -38,21 +38,21 @@
                         </li>
 
                         <li class="<?php
-                        if($this->uri->segment(2) == 'tampil_antrian' || $this->uri->segment(2) == 'tampil_antrian_poli' || $this->uri->segment(2) == 'tampil_antrian_jadwal'){
-                            echo 'nav-item start active';
-                        }else{
-                            echo 'nav-item';
-                        }
-                        ?>">
-                            <a href="<?php echo site_url('dashboardCS/tampil_antrian');?>" class="nav-link nav-toggle">
-                                <i class="fa fa-list-ol"></i>
-                                <?php
-                        if($this->uri->segment(2) == 'tampil_antrian' || $this->uri->segment(2) == 'tampil_antrian_poli' || $this->uri->segment(2) == 'tampil_antrian_jadwal'){
-                            echo '<span class="selected"></span>';
-                        }
-                        ?>
-                                <span class="title">Tampilkan Antrian</span>
-                            </a>
-                        </li>
+                        // if($this->uri->segment(2) == 'tampil_antrian' || $this->uri->segment(2) == 'tampil_antrian_poli' || $this->uri->segment(2) == 'tampil_antrian_jadwal'){
+                        //     echo 'nav-item start active';
+                        // }else{
+                        //     echo 'nav-item';
+                        // }
+                        // ?>">
+                        //     <a href="<?php echo site_url('dashboardCS/tampil_antrian');?>" class="nav-link nav-toggle">
+                        //         <i class="fa fa-list-ol"></i>
+                        //         <?php
+                        // if($this->uri->segment(2) == 'tampil_antrian' || $this->uri->segment(2) == 'tampil_antrian_poli' || $this->uri->segment(2) == 'tampil_antrian_jadwal'){
+                        //     echo '<span class="selected"></span>';
+                        // }
+                        // ?>
+                        //         <span class="title">Tampilkan Antrian</span>
+                        //     </a>
+                        // </li>
                         
                     </ul>
