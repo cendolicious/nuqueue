@@ -89,7 +89,7 @@
               <input type="hidden" name="id_poli" value="<?php echo $id_poli;?>"/>
               <input type="hidden" name="kode_poli" value="<?php echo $kode_poli;?>"/>
               <input type="hidden" name="id_jadwal" value="<?php echo $id_jadwal;?>"/>
-                    <h5 class="text-center warning" id="message">Pastikan pasien sudah terdaftar sebagai di pasien dan memiliki NIK di <a href="https://simrs.rssinarkasih.com">SIMRS</a> </h5>
+                    <h5 class="text-center bg-warning" id="message">Pastikan pasien sudah terdaftar sebagai di pasien dan memiliki NIK di <a href="https://simrs.rssinarkasih.com">SIMRS</a> </h5>
                     <h5 class="text-center" id="message">Silahkan masukan No. NIK</h5>
                     <h5 class="text-center" id="datajson"></h5>
                <div class="form-group col-md-12">
