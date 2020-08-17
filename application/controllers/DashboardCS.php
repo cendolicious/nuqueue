@@ -77,25 +77,25 @@ class DashboardCS extends CI_Controller {
 		$pdf->SetFont($family,$style,$size);
 
 		$html = '<br><h1 style="color:black;text-align:center;">TIKET ANTRIAN</h1>';
-		$query2 = "SELECT * FROM rumahsakit WHERE id_rs = ".$row->id_rs;
+		$query2 = "SELECT * FROM tbl_profil_rumah_sakit WHERE id = 1";
 			$resultquery2 = $this->db->query($query2);
 		foreach ($resultquery2->result() as $row2) {
-			$html .= '<div style="color:black;text-align:center;">'.$row2->nama_rs.' - ';
+			$html .= '<div style="color:black;text-align:center;">'.$row2->nama_rumah_sakit.' - ';
 		}
-		$query3 = "SELECT * FROM poliklinik WHERE id_poli = ".$row->id_poli;
+		$query3 = "SELECT * FROM tbl_poliklinik WHERE id_poliklinik = ".$row->id_poli;
 			$resultquery3 = $this->db->query($query3);
 		foreach ($resultquery3->result() as $row2) {
-			$html .= ''.$row2->nama_poli.' - ';
+			$html .= 'Poli '.$row2->nama_poliklinik.' - ';
 		}
 		$html .= ''.$row->tgl_antrian.'</div>';
 		$html .= '<hr><hr><hr>';
-		$html .= '<br><br><h6 style="color:black;text-align:center;">Pasien dengan NIK '.$row->no_nik.' telah terdaftar dengan </h6>';
-		$html .= '<br><br><h2 style="color:black;text-align:center;"> No. Antrian : '.$row->no_antrian.'</h2>';
+		$html .= '<br><br><h6 style="color:black;text-align:center;">Pasien dengan NIK '.$row->nik.' telah terdaftar dengan </h6>';
+		$html .= '<br><br><h2 style="color:black;text-align:center;"> No. Antrian : '.$row->no_periksa.'</h2>';
 		
 
 		$html .= '<br><hr><hr><hr><br>';
 		$html .= '<br><br><h6 style="color:black;text-align:center;">*Tiket ini hanya berlaku selama 1 hari*</h6>';
-		$html .= '<br><br><h4 style="color:black;text-align:center;">-------NUQUEUE-------</h4>';
+		$html .= '<br><br><h4 style="color:black;text-align:center;">--------------</h4>';
 		$html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Terintegrasi</h5>';
 
 		$ln = true;
