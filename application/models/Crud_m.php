@@ -143,7 +143,7 @@ class crud_m extends CI_model
     {
         $query = "SELECT * FROM tbl_jadwal_praktek_dokter as j 
                    INNER JOIN tbl_dokter as d ON j.kode_dokter = d.kode_dokter 
-                   WHERE j.id_poli = $id_poli AND j.id_jadwal = $id_jadwal" ;
+                   WHERE j.id_poliklinik = $id_poli AND j.id_jadwal = $id_jadwal" ;
         return $this->db->query($query);
     }
 
