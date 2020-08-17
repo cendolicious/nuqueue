@@ -106,7 +106,10 @@ class crud_m extends CI_model
     {
         date_default_timezone_set('Asia/Jakarta');
         $today_date = date("Y-m-d");
-        $query = "SELECT DISTINCT a.no_antrian,n.nama_pasien FROM antrian as a INNER JOIN nqtemp as n ON a.no_nik = n.no_nik WHERE a.status_antrian = 2 AND a.id_jadwal = $id_jadwal AND a.tgl_antrian LIKE '$today_date%' ORDER BY a.tgl_antrian";
+        $query = "SELECT DISTINCT a.no_antrian,n.nama_pasien 
+                    FROM tbl_antrian as a 
+                    INNER JOIN tbl_user as n ON a.nik = n.nik 
+                    WHERE a.status_antrian = 2 AND a.id_jadwal = $id_jadwal AND a.tgl_periksa LIKE '$today_date%' ORDER BY a.tgl_periksa";
         return $this->db->query($query);
     }
 
@@ -114,7 +117,10 @@ class crud_m extends CI_model
     {
         date_default_timezone_set('Asia/Jakarta');
         $today_date = date("Y-m-d");
-        $query = "SELECT a.no_antrian,n.nama_pasien FROM antrian as a INNER JOIN nqtemp as n ON a.no_nik = n.no_nik WHERE a.status_antrian = 1 AND a.id_jadwal = $id_jadwal AND a.tgl_antrian LIKE '$today_date%' ";
+        $query = "SELECT a.no_antrian, n.nama_pasien 
+                    FROM tbl_antrian as a 
+                    INNER JOIN tbl_user as n ON a.nik = n.nik 
+                    WHERE a.status_antrian = 1 AND a.id_jadwal = $id_jadwal AND a.tgl_periksa LIKE '$today_date%' ";
         return $this->db->query($query);
     }
 
@@ -123,7 +129,7 @@ class crud_m extends CI_model
     {
         date_default_timezone_set('Asia/Jakarta');
         $today_date = date("Y-m-d");
-        $query  = "SELECT * FROM antrian WHERE status_antrian = 1 AND id_jadwal = $id_jadwal AND tgl_antrian LIKE '$today_date%'";
+        $query  = "SELECT * FROM tbl_antrian WHERE status_antrian = 1 AND id_jadwal = $id_jadwal AND tgl_periksa LIKE '$today_date%'";
         return $this->db->query($query);
     }
 
