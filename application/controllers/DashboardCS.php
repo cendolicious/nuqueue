@@ -196,55 +196,55 @@ class DashboardCS extends CI_Controller
 		$this->load->view('tampil_antrian', $data);
 	}
 
-	public function pasien_baru_onsite()
-	{
-		$nik_pasien = $this->input->post('nik_pasien');
-		$nama_pasien = $this->input->post('nama_pasien');
-		$tgllhr_pasien = $this->input->post('tgllhr_pasien');
-		$alamat_pasien = $this->input->post('alamat_pasien');
-		$telepon_pasien = $this->input->post('telepon_pasien');
-		$jk_pasien = $this->input->post('jk_pasien');
-		$goldar_pasien = $this->input->post('goldar_pasien');
+	// public function pasien_baru_onsite()
+	// {
+	// 	$nik_pasien = $this->input->post('nik_pasien');
+	// 	$nama_pasien = $this->input->post('nama_pasien');
+	// 	$tgllhr_pasien = $this->input->post('tgllhr_pasien');
+	// 	$alamat_pasien = $this->input->post('alamat_pasien');
+	// 	$telepon_pasien = $this->input->post('telepon_pasien');
+	// 	$jk_pasien = $this->input->post('jk_pasien');
+	// 	$goldar_pasien = $this->input->post('goldar_pasien');
 
-		$data = array(
-			"nama_pasien" => $nama_pasien,
-			"tgllahir_pasien" => $tgllhr_pasien,
-			"alamat_pasien" => $alamat_pasien,
-			"telepon_pasien" => $telepon_pasien,
-			"jk_pasien" => $jk_pasien,
-			"goldar_pasien" => $goldar_pasien,
-			"no_nik" => $nik_pasien
-		);
-		$this->crud_m->insertData('nqtemp', $data);
+	// 	$data = array(
+	// 		"nama_pasien" => $nama_pasien,
+	// 		"tgllahir_pasien" => $tgllhr_pasien,
+	// 		"alamat_pasien" => $alamat_pasien,
+	// 		"telepon_pasien" => $telepon_pasien,
+	// 		"jk_pasien" => $jk_pasien,
+	// 		"goldar_pasien" => $goldar_pasien,
+	// 		"no_nik" => $nik_pasien
+	// 	);
+	// 	$this->crud_m->insertData('nqtemp', $data);
 
-		$id_rs = $this->input->post('id_rs');
-		$id_poli = $this->input->post('id_poli');
-		$id_jadwal = $this->input->post('id_jadwal');
-		$tipe_daftar = $this->input->post('tipe_daftar');
+	// 	$id_rs = $this->input->post('id_rs');
+	// 	$id_poli = $this->input->post('id_poli');
+	// 	$id_jadwal = $this->input->post('id_jadwal');
+	// 	$tipe_daftar = $this->input->post('tipe_daftar');
 
-		$getJmlAntrian = $this->crud_m->getJmlAntrian($id_rs, $id_poli, $id_jadwal);
-		foreach ($getJmlAntrian->result() as $key) {
-			if ($key->jml_antrian == 0) {
-				$no_antrian = 1;
-			} else {
-				$no_antrian = $key->jml_antrian + 1;
-			}
-		}
+	// 	$getJmlAntrian = $this->crud_m->getJmlAntrian($id_rs, $id_poli, $id_jadwal);
+	// 	foreach ($getJmlAntrian->result() as $key) {
+	// 		if ($key->jml_antrian == 0) {
+	// 			$no_antrian = 1;
+	// 		} else {
+	// 			$no_antrian = $key->jml_antrian + 1;
+	// 		}
+	// 	}
 
-		$data2 = array(
-			"id_rs" => $id_rs,
-			"id_poli" => $id_poli,
-			"id_jadwal" => $id_jadwal,
-			"no_antrian" => date(ymd) . '-' . $id_rs . $id_poli . $id_jadwal . '-' . $no_antrian,
-			"tipe_daftar" => $tipe_daftar,
-			"no_nik" => $nik_pasien
-		);
-		$this->crud_m->insertData('antrian', $data2);
+	// 	$data2 = array(
+	// 		"id_rs" => $id_rs,
+	// 		"id_poli" => $id_poli,
+	// 		"id_jadwal" => $id_jadwal,
+	// 		"no_antrian" => date(ymd) . '-' . $id_rs . $id_poli . $id_jadwal . '-' . $no_antrian,
+	// 		"tipe_daftar" => $tipe_daftar,
+	// 		"no_nik" => $nik_pasien
+	// 	);
+	// 	$this->crud_m->insertData('antrian', $data2);
 
 
 
-		redirect('app/kelola_antrian_jadwal/' . $id_poli . '/' . $id_jadwal);
-	}
+	// 	redirect('app/kelola_antrian_jadwal/' . $id_poli . '/' . $id_jadwal);
+	// }
 
 	public function pasien_lama_onsite()
 	{
