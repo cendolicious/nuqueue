@@ -170,7 +170,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <div class="dashboard-stat2 text-center">
                                <h5><?php 
-                               switch ($key->jadwal_poli) {
+                               switch ($key->hari) {
                                    case 'Sun':
                                        echo "Minggu";
                                        break;
@@ -197,8 +197,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                }
                                ?></h5>
                                <h2 style="margin-top: 0;"><?php echo $key->nama_dokter;?></h2>
-                               <h4><?php echo substr($key->jammulai_poli,0,5).' - '.substr($key->jamselesai_poli,0,5)?></h4>
-                               <a href="<?php echo site_url('app/kelola_antrian_jadwal');?>/<?php echo $id_poli?>/<?php echo $key->id_jadwal?>" class="btn btn-primary">Kelola</a>
+                               <h4><?php echo $key->jam_mulai.' - '.$key->jam_selesai?></h4>
+                               <a href="<?php echo site_url('dashboardCS/kelola_antrian_jadwal');?>/<?php echo $id_poli?>/<?php echo $key->id_jadwal?>" class="btn btn-primary">Kelola</a>
                             </div>
 
                         </div>
