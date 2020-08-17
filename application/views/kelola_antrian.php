@@ -261,11 +261,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                                 <div class="portlet-body text-center">
                                      <form action="<?php echo site_url('dashboardCS/panggil_antrian') ?>" method="post">
-              <input type="hidden" name="id_poli" value="<?php echo $id_poli;?>"/>
-              <input type="hidden" name="id_jadwal" value="<?php echo $id_jadwal;?>"/>
+                                        <input type="hidden" name="id_poli" value="<?php echo $id_poli;?>"/>
+                                        <input type="hidden" name="id_jadwal" value="<?php echo $id_jadwal;?>"/>
 
-<input type="hidden" name="no_antrian_selanjutnya" value="<?php if(!empty($antrian_selanjutnya))
-echo $antrian_selanjutnya;?>"/>
+                                        <input type="hidden" name="no_antrian_selanjutnya" value="<?php if(!empty($antrian_selanjutnya))
+                                        echo $antrian_selanjutnya;?>"/>
 
                                          <button type="submit" role="button" class="btn btn-lg btn-warning">Panggil Antrian Selanjutnya</button>
                                     </form>

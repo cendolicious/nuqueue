@@ -84,7 +84,7 @@
        </div> -->
 
        <div id="formpasienlama">
-        <form action="<?php echo site_url('app/pasien_lama_onsite') ?>" method="post">
+        <form action="<?php echo site_url('dashboardCS/pasien_lama_onsite') ?>" method="post">
           <input type="hidden" name="tipe_daftar" value="2"/>
               <input type="hidden" name="id_poli" value="<?php echo $id_poli;?>"/>
               <input type="hidden" name="id_jadwal" value="<?php echo $id_jadwal;?>"/>

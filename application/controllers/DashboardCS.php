@@ -250,12 +250,11 @@ class DashboardCS extends CI_Controller {
 	{
 		$nik_pasien = $this->input->post('nik_pasien');
 
-		$id_rs = $this->input->post('id_rs');
 		$id_poli = $this->input->post('id_poli');
 		$id_jadwal = $this->input->post('id_jadwal');
 		$tipe_daftar = $this->input->post('tipe_daftar');
 
-		$getJmlAntrian = $this->crud_m->getJmlAntrian($id_rs,$id_poli,$id_jadwal);
+		$getJmlAntrian = $this->crud_m->getJmlAntrian($id_poli,$id_jadwal);
 		foreach ($getJmlAntrian->result() as $key) {
 			if ($key->jml_antrian == 0) {
 				$no_antrian = 1;
@@ -267,14 +266,13 @@ class DashboardCS extends CI_Controller {
 		$today = date('ymd');
 
 		$data2 = array(
-		"id_rs" => $id_rs,
 		"id_poli" => $id_poli,
 		"id_jadwal" => $id_jadwal,
 		"no_antrian" => $today.'-'.$id_rs.$id_poli.$id_jadwal.'-'.$no_antrian,
 		"tipe_daftar" => $tipe_daftar,
 		"no_nik" => $nik_pasien
 		);
-		$this->crud_m->insertData('antrian',$data2);
+		$this->crud_m->insertData('tbl_antrian',$data2);
 
 		/*$this->load->library('tcpdf/tcpdf');
 
