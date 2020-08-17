@@ -33,7 +33,6 @@
             
            <form action="<?php echo site_url('app/pasien_baru_onsite') ?>" method="post">
             <input type="hidden" name="tipe_daftar" value="2"/>
-              <input type="hidden" name="id_rs" value="<?php echo $id_rs;?>"/>
               <input type="hidden" name="id_poli" value="<?php echo $id_poli;?>"/>
               <input type="hidden" name="id_jadwal" value="<?php echo $id_jadwal;?>"/>
 
@@ -87,7 +86,6 @@
        <div id="formpasienlama">
         <form action="<?php echo site_url('app/pasien_lama_onsite') ?>" method="post">
           <input type="hidden" name="tipe_daftar" value="2"/>
-              <input type="hidden" name="id_rs" value="<?php echo $id_rs;?>"/>
               <input type="hidden" name="id_poli" value="<?php echo $id_poli;?>"/>
               <input type="hidden" name="id_jadwal" value="<?php echo $id_jadwal;?>"/>
                     <h5 class="text-center" id="message">Silahkan masukan No. NIK</h5>
