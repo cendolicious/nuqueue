@@ -34,12 +34,7 @@ class Auth extends CI_Controller {
 			$this->session->set_userdata('fullname',$getDataRS->full_name);
 			// $this->session->set_userdata('alamat_rs',$getDataRS->alamat_rs);
 			// $this->session->set_userdata('telepon_rs',$getDataRS->telepon_rs);
-			
-				if ($email_rs ==  'admin@rssinarkasih.com') {
-					redirect('app/dashboard_rs');
-				}else{
-					redirect('dashboardCS/dashboard_cs');
-				}
+			redirect('dashboardCS/dashboard_cs');
 		}
 		
 	}
