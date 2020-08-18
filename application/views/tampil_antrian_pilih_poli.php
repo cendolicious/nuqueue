@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <head>
         <meta charset="utf-8" />
-        <meta http-equiv="refresh" content="1">
+        <!-- <meta http-equiv="refresh" content="1"> -->
         <title>Dashboard CS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid">
         <!-- BEGIN HEADER -->
-        <!-- <div class="page-header navbar navbar-fixed-top">
+        <div class="page-header navbar navbar-fixed-top">
             <!-- BEGIN HEADER INNER -->
             <div class="page-header-inner w-100">
                 <!-- BEGIN LOGO -->
@@ -109,14 +109,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <!-- END PAGE TOP -->
             </div>
             <!-- END HEADER INNER -->
-        </div> -->
+        </div>
         <!-- END HEADER -->
         <!-- BEGIN HEADER & CONTENT DIVIDER -->
         <div class="clearfix"> </div>
         <!-- END HEADER & CONTENT DIVIDER -->
         <!-- BEGIN CONTAINER -->
         <div class="page-container" style="height: 100vh;">
-            <!-- BEGIN SIDEBAR
+            <!-- BEGIN SIDEBAR -->
             <div class="page-sidebar-wrapper">
                 <!-- END SIDEBAR -->
                 <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
@@ -133,7 +133,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <!-- END SIDEBAR MENU -->
                 </div>
                 <!-- END SIDEBAR -->
-            </div> -->
+            </div>
             <!-- END SIDEBAR -->
             <!-- BEGIN CONTENT -->
             <div class="page-content-wrapper" style="height: 100%;">
@@ -197,12 +197,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <!-- END CONTAINER -->
         <!-- BEGIN FOOTER -->
-        <!-- <div class="page-footer">
-            <div class="page-footer-inner"> RS Sinar Kasih, 2020
-                <div class="scroll-to-top">
-                    <i class="icon-arrow-up"></i>
-                </div>
-            </div> -->
+
+
             <!-- END FOOTER -->
             <!-- BEGIN QUICK NAV -->
             <!-- END QUICK NAV -->
