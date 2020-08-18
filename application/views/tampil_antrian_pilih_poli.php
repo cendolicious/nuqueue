@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <head>
         <meta charset="utf-8" />
-        <!-- <meta http-equiv="refresh" content="1"te > -->
+        <meta http-equiv="refresh" content="1">
         <title>Dashboard CS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- BEGIN HEADER -->
         <div class="page-header navbar navbar-fixed-top">
             <!-- BEGIN HEADER INNER -->
-            <div class="page-header-inner ">
+            <div class="page-header-inner w-100">
                 <!-- BEGIN LOGO -->
                 <div class="page-logo">
                     <img src="<?php echo base_url(); ?>assets/layouts/layout2/img/LogoKliniks.png" alt="logo" class="logo-default" />
@@ -164,7 +164,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         foreach ($data_poli->result() as $key) {
                         ?>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                            <div class="dashboard-stat2 text-center">
+                            <div class="dashboard-stat2 text-center border border-info">
                                 
                                <h2><?php echo $key->nama_poliklinik ?></h2>
                                <!-- <a href="tampil_antrian_poli/<?php echo $key->id_poliklinik?>" class="btn btn-primary">Tampil</a> -->
@@ -172,7 +172,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 foreach ($data_antrian->result() as $key2) {
                                     if ($key->id_poliklinik == $key2->id_poli) {
                                 ?>
-                                    <h2 class="font-weight-bolder"><?php echo $key2->no_antrian ?></h2>
+                                    <h1 class="font-weight-bolder alert alert-info"><?php echo $key2->no_antrian ?></h1>
                                 <?php
                                    }
                                 }
