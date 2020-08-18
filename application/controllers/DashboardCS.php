@@ -269,7 +269,7 @@ class DashboardCS extends CI_Controller
 				$no_antrian = $key->jml_antrian + 1;
 			}
 		}
-		date_default_timezone_set('Asia/Jakarta');
+		date_default_timezone_set('Asia/Makassar');
 		$today = date('ymd');
 
 		$data2 = array(
