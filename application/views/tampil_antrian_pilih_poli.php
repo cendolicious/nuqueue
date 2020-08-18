@@ -150,7 +150,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
-                                <span>Pilih Poliklinik</span>
+                                <span>Antrian Poliklinik</span>
                             </li>
                         </ul>
 
@@ -164,7 +164,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="dashboard-stat2 text-center">
                                 
                                <h2><?php echo $key->nama_poliklinik ?></h2>
-                               <a href="tampil_antrian_poli/<?php echo $key->id_poliklinik?>" class="btn btn-primary">Tampil</a>
+                               <!-- <a href="tampil_antrian_poli/<?php echo $key->id_poliklinik?>" class="btn btn-primary">Tampil</a> -->
                             </div>
 
                         </div>

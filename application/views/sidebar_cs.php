@@ -37,7 +37,7 @@
                             </a>
                         </li>
 
-                        <!-- <li class="<?php
+                        <li class="<?php
                         if($this->uri->segment(2) == 'tampil_antrian' || $this->uri->segment(2) == 'tampil_antrian_poli' || $this->uri->segment(2) == 'tampil_antrian_jadwal'){
                             echo 'nav-item start active';
                         }else{
@@ -53,6 +53,6 @@
                         ?>
                                 <span class="title">Tampilkan Antrian</span>
                             </a>
-                        </li> -->
+                        </li>
                         
                     </ul>
