@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <head>
         <meta charset="utf-8" />
-        <meta http-equiv="refresh" content="1">
+        <!-- <meta http-equiv="refresh" content="1"> -->
         <title>Dashboard CS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
