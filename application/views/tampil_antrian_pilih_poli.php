@@ -198,7 +198,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- END CONTAINER -->
         <!-- BEGIN FOOTER -->
         <div class="page-footer">
-            
+            <div class="page-footer-inner"> RS Sinar Kasih, 2020
+                <div class="scroll-to-top">
+                    <i class="icon-arrow-up"></i>
+                </div>
+            </div>
             <!-- END FOOTER -->
             <!-- BEGIN QUICK NAV -->
             <!-- END QUICK NAV -->
@@ -215,7 +219,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <script src="<?php echo base_url(); ?>assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
             <script src="<?php echo base_url(); ?>assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
             <!-- END CORE PLUGINS -->
-        
+            <!-- BEGIN PAGE LEVEL PLUGINS -->
+
             <!-- END PAGE LEVEL PLUGINS -->
             <!-- BEGIN THEME GLOBAL SCRIPTS -->
             <script src="<?php echo base_url(); ?>assets/global/scripts/app.min.js" type="text/javascript"></script>
