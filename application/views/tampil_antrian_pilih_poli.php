@@ -167,11 +167,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                <!-- <a href="tampil_antrian_poli/<?php echo $key->id_poliklinik?>" class="btn btn-primary">Tampil</a> -->
                                <?php
                                 foreach ($data_antrian->result() as $key2) {
-                                    if ($key->id_poliklinik == $key2->id_poli) {
+                                    //if ($key->id_poliklinik == $key2->id_poli) {
                                 ?>
                                     <h2><?php echo $key2->no_antrian ?></h2>
                                 <?php
-                                    }
+                                   // }
                                 }
                                 ?>
                             </div>
