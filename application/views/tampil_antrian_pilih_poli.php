@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <head>
         <meta charset="utf-8" />
-        <!-- <meta http-equiv="refresh" content="1"> -->
+        <!-- <meta http-equiv="refresh" content="1"te > -->
         <title>Dashboard CS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -159,7 +159,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <!-- END PAGE HEADER-->
                     <div class="row">
                         <?php
-                            foreach ($data_poli->result() as $key) {
+                        $cnt=1;
+                        foreach ($data_poli->result() as $key) {
                         ?>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <div class="dashboard-stat2 text-center">
@@ -178,7 +179,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                         </div>
                         <?php
-                    }
+                            if ($cnt%3==0){
+                        ?>
+                                <div class="w-100 d-none d-md-block"></div>
+                        <?php
+                            }
+                        }
                         ?>
                 <!-- END CONTENT BODY -->
             </div>
