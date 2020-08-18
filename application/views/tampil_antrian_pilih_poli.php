@@ -8,6 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <head>
         <meta charset="utf-8" />
+        <meta http-equiv="refresh" content="5">
         <title>Dashboard CS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -167,11 +168,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                <!-- <a href="tampil_antrian_poli/<?php echo $key->id_poliklinik?>" class="btn btn-primary">Tampil</a> -->
                                <?php
                                 foreach ($data_antrian->result() as $key2) {
-                                    //if ($key->id_poliklinik == $key2->id_poli) {
+                                    if ($key->id_poliklinik == $key2->id_poli) {
                                 ?>
                                     <h2><?php echo $key2->no_antrian ?></h2>
                                 <?php
-                                   // }
+                                   }
                                 }
                                 ?>
                             </div>
