@@ -148,6 +148,12 @@ class DashboardCS extends CI_Controller
 
 		$data['data_poli'] = $this->crud_m->ambilData('tbl_poliklinik');
 
+		$where = array(
+			'status_antrian' => 1,
+		);
+
+		$data['data_antrian'] = $this->crud_m->ambilData('tbl_antrian', $where);
+
 		$this->load->view('tampil_antrian_pilih_poli', $data);
 	}
 

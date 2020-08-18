@@ -158,15 +158,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <!-- END PAGE HEADER-->
                     <div class="row">
                         <?php
-                    foreach ($data_poli->result() as $key) {
+                            foreach ($data_poli->result() as $key) {
                         ?>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                             <div class="dashboard-stat2 text-center">
                                 
                                <h2><?php echo $key->nama_poliklinik ?></h2>
                                <!-- <a href="tampil_antrian_poli/<?php echo $key->id_poliklinik?>" class="btn btn-primary">Tampil</a> -->
+                               <?php
+                                foreach ($data_antrian->result() as $key2) {
+                                    if ($key->id_poliklinik == $key2->id_poli) {
+                                ?>
+                                    <h2><?php echo $key2->no_antrian ?></h2>
+                                <?php
+                                    }
+                                }
+                                ?>
                             </div>
-
                         </div>
                         <?php
                     }
