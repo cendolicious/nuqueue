@@ -18,6 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link href="<?php echo base_url(); ?>assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
@@ -159,7 +160,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <!-- END PAGE HEADER-->
                     <div class="row">
                         <?php
-                        $cnt=1;
+                        $cnt=0;
                         foreach ($data_poli->result() as $key) {
                         ?>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
@@ -171,7 +172,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 foreach ($data_antrian->result() as $key2) {
                                     if ($key->id_poliklinik == $key2->id_poli) {
                                 ?>
-                                    <h2><?php echo $key2->no_antrian ?></h2>
+                                    <h2 class="font-weight-bolder"><?php echo $key2->no_antrian ?></h2>
                                 <?php
                                    }
                                 }
