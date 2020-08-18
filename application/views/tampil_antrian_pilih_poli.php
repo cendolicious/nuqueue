@@ -179,6 +179,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                         </div>
                         <?php
+                            $cnt++;
                             if ($cnt%3==0){
                         ?>
                                 <div class="w-100 d-none d-md-block"></div>
