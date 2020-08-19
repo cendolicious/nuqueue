@@ -90,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <!-- END PAGE HEADER-->
                     <div class="row">
-                    <div id="antrian_lists" class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <div id="antrian_lists" class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                     <div id="antrian_container">
                         <?php
                         $cnt=0;
@@ -116,7 +116,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             $cnt++;
                             if ($cnt%2==0){
                         ?>
-                                <div class="w-100 d-none d-md-block"></div>
+                                <div class="w-100 d-none d-md-block float-left"></div>
                         <?php
                             }
                         }
