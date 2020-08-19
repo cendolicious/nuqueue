@@ -63,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="page-breadcrumb">
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('dashboardCS/dashboard_rs');?>">Home</a>
+                                <a href="<?php echo site_url('app/dashboard_rs');?>">Home</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
@@ -74,6 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <!-- END PAGE HEADER-->
                     <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                         <?php
                         $cnt=0;
                         foreach ($data_poli->result() as $key) {
@@ -103,8 +104,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             }
                         }
                         ?>
-                <!-- END CONTENT BODY -->
-            </div>
+                        </div>
+                        <div >
+                        <iframe class="col-lg-4 col-md-4 col-sm-4 col-xs-4"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        </iframe>
+                    <!-- END CONTENT BODY -->
+                    </div>
            
             <!-- END CONTENT -->
             <!-- BEGIN QUICK SIDEBAR -->
