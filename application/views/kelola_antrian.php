@@ -245,10 +245,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="caption">
                                         <i class="icon-share font-dark hide"></i>
                                         <span class="caption-subject font-dark bold uppercase">Sedang Diperiksa : <?php
+                                        $diperiksa = NULL;
                                         if (empty($data_antrian_saat_ini->result())) {
                                             echo "-";
                                         }else{
                                             foreach ($data_antrian_saat_ini->result() as $key) {
+                                            $diperiksa = $key->no_antrian;
                                             echo $key->no_antrian.' '.$key->nama_pasien;
                                             }
                                         }
@@ -357,9 +359,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <script type="text/javascript">
     $(document).ready(function() {
 
-    $called = <?php echo $called; ?>;
-    if ($called == 1) {
-        var audioFiles = ["<?php echo base_url(); ?>assets/global/wav/a.wav"];
+    called = <?php echo $called; ?>;
+    if (called == 1) {
+
+        var audioFiles = [];
+
+        var noAntrianArray = <?php echo $diperiksa; ?>.split("-");
+
+        var noAntrianKodePoli = str_split(noAntrianArray[0]);
+        for (let c of noAntrianKodePoli) {
+            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+c.toLowerCase()+".wav");
+        }
+
+
+        // $noantriannomor = str_split($noantrian_array[1]);
+        // foreach($myArray as $character){
+        //     echo $character . "<br>";
+        // }
+
+
+
+
         var audio = document.createElement("audio");
         var audioIdx = 0;
 
