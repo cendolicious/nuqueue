@@ -365,9 +365,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         var audioFiles = [];
 
         var noAntrianArray = "<?php echo $diperiksa; ?>".split("-");
-
-        var noAntrianKodePoli = str_split(noAntrianArray[0]);
-        for (let c of noAntrianKodePoli) {
+        
+        for (let c of noAntrianArray[0]) {
             audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+c.toLowerCase()+".wav");
         }
 
