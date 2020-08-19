@@ -357,20 +357,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <script type="text/javascript">
     $(document).ready(function() {
 
-    var audioFiles = ["<?php echo base_url(); ?>assets/global/wav/a.wav"];
-    var audio = document.createElement("audio");
-    var audioIdx = 0;
+    $called = <?php echo $called; ?>;
+    if ($called == 1) {
+        var audioFiles = ["<?php echo base_url(); ?>assets/global/wav/a.wav"];
+        var audio = document.createElement("audio");
+        var audioIdx = 0;
 
-    audio.addEventListener('ended', function () {
-        audioIdx++;
-        if (audioIdx >= audioFiles.length) audioIdx = 0;
-        this.src = audioFiles[audioIdx];
-        this.play();
-    });
-    audio.src = audioFiles[audioIdx];
-    audio.play();
+        audio.addEventListener('ended', function () {
+            audioIdx++;
+            if (audioIdx >= audioFiles.length) audioIdx = 0;
+            this.src = audioFiles[audioIdx];
+            this.play();
+        });
+        audio.src = audioFiles[audioIdx];
+        audio.play();
+    }
+ 
 
-        
     });
     </script>
     </body>

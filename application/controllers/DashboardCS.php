@@ -55,7 +55,7 @@ class DashboardCS extends CI_Controller
 		$this->load->view('kelola_antrian_pilih_jadwal', $data);
 	}
 
-	public function kelola_antrian_jadwal($id_poli, $id_jadwal, $called = false, $after = NULL)
+	public function kelola_antrian_jadwal($id_poli, $id_jadwal, $called = 0, $after = NULL)
 	{
 
 		if ($after != NULL) {
@@ -328,7 +328,7 @@ $html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Te
 		$name = '/TIKET-'.$today.'-'.$id_rs.$id_poli.$id_jadwal.'-'.$no_antrian.'.pdf';
 		$dest = 'I'; //'I','F','D'
 		$pdf->Output($name,$dest);*/
-		redirect('dashboardCS/kelola_antrian_jadwal/' . $id_poli . '/' . $id_jadwal . '/false/1');
+		redirect('dashboardCS/kelola_antrian_jadwal/' . $id_poli . '/' . $id_jadwal . '/0/1');
 	}
 
 
@@ -365,6 +365,6 @@ $html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Te
 		}
 
 
-		redirect('dashboardCS/kelola_antrian_jadwal/' . $id_poli . '/' . $id_jadwal . '/' . true);
+		redirect('dashboardCS/kelola_antrian_jadwal/' . $id_poli . '/' . $id_jadwal . '/' . 1);
 	}
 }
