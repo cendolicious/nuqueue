@@ -146,11 +146,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="page-breadcrumb">
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('app/dashboard_rs');?>">Home</a>
+                                <a href="<?php echo site_url('dashboardCS/dashboard_rs');?>">Home</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('app/tampil_antrian');?>">Pilih Poliklinik</a>
+                                <a href="<?php echo site_url('dashboardCS/tampil_antrian');?>">Pilih Poliklinik</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>

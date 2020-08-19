@@ -195,7 +195,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="page-breadcrumb">
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('app/dashboard_admin');?>">Home</a>
+                                <a href="<?php echo site_url('dashboardCS/dashboard_admin');?>">Home</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
@@ -285,11 +285,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         if ($key->status_rs == 3 || $key->status_rs == 0) {
                                                             $classaksi = 'btn btn-warning';
                                                             $namaaksi = 'Aktivasi';
-                                                            $href = 'app/aktivasi_rs';
+                                                            $href = 'dashboardCS/aktivasi_rs';
                                                         }else{
                                                             $classaksi = 'btn btn-danger';
                                                             $namaaksi = 'Blokir';
-                                                            $href = 'app/blokir_rs';
+                                                            $href = 'dashboardCS/blokir_rs';
                                                         }
                                                     ?>
                                                     <a href="<?php echo site_url($href.'/'.$key->id_rs) ?>" type="button" class="<?php echo $classaksi;?>"><?php echo $namaaksi?></a>

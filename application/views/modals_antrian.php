@@ -31,7 +31,7 @@
 
           <!-- <div id="formpasienbaru">
             
-           <form action="<?php echo site_url('app/pasien_baru_onsite') ?>" method="post">
+           <form action="<?php echo site_url('dashboardCS/pasien_baru_onsite') ?>" method="post">
             <input type="hidden" name="tipe_daftar" value="2"/>
               <input type="hidden" name="id_poli" value="<?php echo $id_poli;?>"/>
               <input type="hidden" name="id_jadwal" value="<?php echo $id_jadwal;?>"/>
@@ -99,7 +99,7 @@
                
              <div class="form-row">
                <div class="form-group col-md-12">
-                 <button id="btnPasienLama" type="submit" class="btn btn-primary col-md-12">Daftar</button></div>
+                 <button onClick="window.location.reload();" id="btnPasienLama" type="submit" class="btn btn-primary col-md-12">Daftar</button></div>
              </div>
            </form>
        </div>

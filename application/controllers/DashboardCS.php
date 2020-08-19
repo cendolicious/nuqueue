@@ -251,7 +251,7 @@ class DashboardCS extends CI_Controller
 
 
 
-	// 	redirect('app/kelola_antrian_jadwal/' . $id_poli . '/' . $id_jadwal);
+	// 	redirect('dashboardCS/kelola_antrian_jadwal/' . $id_poli . '/' . $id_jadwal);
 	// }
 
 	public function pasien_lama_onsite()

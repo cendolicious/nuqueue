@@ -96,7 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
                                     <li>
-                                        <a href="<?php echo site_url('app/profil_rs');?>">
+                                        <a href="<?php echo site_url('dashboardCS/profil_rs');?>">
                                             <i class="icon-user"></i>Profil Saya</a>
                                     </li>
                                     <li class="divider"> </li>
@@ -156,7 +156,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="page-breadcrumb">
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('app/dashboard_rs');?>">Home</a>
+                                <a href="<?php echo site_url('dashboardCS/dashboard_rs');?>">Home</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
@@ -202,8 +202,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <?php echo $key->nama_poli?>
                                                 </td>
                                                <td>
-                                                   <a href="<?php echo site_url('app/edit_dokter/'.$key->id_dokter) ?>" type="button" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                  <a href="<?php echo site_url('app/hapus_dokter/'.$key->id_dokter) ?>" class="btn btn-danger" onClick="return confirm('Yakin ingin menghapus dokter ini?')"><i class="fa fa-trash"></i></a>
+                                                   <a href="<?php echo site_url('dashboardCS/edit_dokter/'.$key->id_dokter) ?>" type="button" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+                  <a href="<?php echo site_url('dashboardCS/hapus_dokter/'.$key->id_dokter) ?>" class="btn btn-danger" onClick="return confirm('Yakin ingin menghapus dokter ini?')"><i class="fa fa-trash"></i></a>
                                                </td>
                                             </tr>
                                             <?php

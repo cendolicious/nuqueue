@@ -6,7 +6,7 @@
                             echo 'nav-item';
                         }
                         ?>">
-                            <a href="<?php echo site_url('app/dashboard_admin');?>" class="nav-link nav-toggle">
+                            <a href="<?php echo site_url('dashboardCS/dashboard_admin');?>" class="nav-link nav-toggle">
                                 <i class="icon-home"></i>
                                 <?php
                         if($this->uri->segment(2) == 'dashboard_admin'){
@@ -26,7 +26,7 @@
                             echo 'nav-item';
                         }
                         ?>">
-                            <a href="<?php echo site_url('app/kelola_rs');?>" class="nav-link nav-toggle">
+                            <a href="<?php echo site_url('dashboardCS/kelola_rs');?>" class="nav-link nav-toggle">
                                 <i class="fa fa-database"></i>
                                 <?php
                         if($this->uri->segment(2) == 'kelola_rs'){

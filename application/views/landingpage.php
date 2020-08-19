@@ -100,7 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="panel-heading" align="center">
                 </div>
                 <div class="panel-body">
-                <form id="formRegist" role="form" action="<?php echo site_url('app/daftar_rs'); ?>" method="post">
+                <form id="formRegist" role="form" action="<?php echo site_url('dashboardCS/daftar_rs'); ?>" method="post">
 
                    <strong><label>Nama Rumah Sakit</label></strong>
                 <div class="form-group">

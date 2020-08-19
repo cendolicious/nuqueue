@@ -156,11 +156,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="page-breadcrumb">
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('app/dashboard_rs');?>">Home</a>
+                                <a href="<?php echo site_url('dashboardCS/dashboard_rs');?>">Home</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('app/kelola_jadwal');?>">Kelola Jadwal</a>
+                                <a href="<?php echo site_url('dashboardCS/kelola_jadwal');?>">Kelola Jadwal</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
@@ -183,7 +183,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <span class="caption-subject font-green sbold uppercase">Sunting Jadwal</span>
                                     </div>
 
-                                   <form action="<?php echo site_url('app/aksi_edit_jadwal') ?>" method="post">
+                                   <form action="<?php echo site_url('dashboardCS/aksi_edit_jadwal') ?>" method="post">
             
                <div class="form-group col-md-12">
         <label class="control-label">Dokter</label>

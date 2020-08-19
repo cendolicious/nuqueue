@@ -11,7 +11,7 @@
        <!-- body modal -->
        <div class="modal-body">
 <div class="bootbox-body row">
-           <form action="<?php echo site_url('app/tambah_dokter') ?>" method="post">
+           <form action="<?php echo site_url('dashboardCS/tambah_dokter') ?>" method="post">
             
                <div class="form-group col-md-12">
                    <label>Nama Dokter</label>

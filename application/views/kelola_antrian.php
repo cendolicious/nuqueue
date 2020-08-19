@@ -169,15 +169,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="page-breadcrumb">
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('app/dashboard_rs');?>">Home</a>
+                                <a href="<?php echo site_url('dashboardCS/dashboard_rs');?>">Home</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('app/kelola_antrian');?>">Pilih Poliklinik</a>
+                                <a href="<?php echo site_url('dashboardCS/kelola_antrian');?>">Pilih Poliklinik</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('app/kelola_antrian_poli');?>/<?php echo $id_poli?>">Pilih Jadwal Poliklinik</a>
+                                <a href="<?php echo site_url('dashboardCS/kelola_antrian_poli');?>/<?php echo $id_poli?>">Pilih Jadwal Poliklinik</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
@@ -358,7 +358,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- END THEME LAYOUT SCRIPTS -->
             <script type="text/javascript">
 
-            
+
     $(document).ready(function() {
 
     called = <?php echo $called; ?>;
@@ -433,7 +433,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         var audio = document.createElement("audio");
         var audioIdx = 0;
 
-        audio.volume=0.7;
+        audio.volume=0.5;
 
         audio.addEventListener('ended', function () {
             audioIdx++;

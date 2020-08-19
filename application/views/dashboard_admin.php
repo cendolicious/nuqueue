@@ -193,7 +193,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="page-breadcrumb">
                             <li>
                                 <i class="icon-home"></i>
-                                <a href="<?php echo site_url('app/dashboard_admin');?>">Home</a>
+                                <a href="<?php echo site_url('dashboardCS/dashboard_admin');?>">Home</a>
                                 <i class="fa fa-angle-right"></i>
                             </li>
                             <li>
@@ -231,7 +231,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="<?php echo site_url('app/kelola_rs');?>" class="btn btn-primary">Kelola Rumah Sakit</a>
+                                    <a href="<?php echo site_url('dashboardCS/kelola_rs');?>" class="btn btn-primary">Kelola Rumah Sakit</a>
                                 </div>
                             </div>
                         </div>
@@ -251,7 +251,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="<?php echo site_url('app/kelola_rs');?>" class="btn btn-primary">Kelola Rumah Sakit</a>
+                                    <a href="<?php echo site_url('dashboardCS/kelola_rs');?>" class="btn btn-primary">Kelola Rumah Sakit</a>
                                 </div>
                             </div>
                         </div>
@@ -271,7 +271,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="<?php echo site_url('app/kelola_rs');?>" class="btn btn-primary">Kelola Rumah Sakit</a>
+                                    <a href="<?php echo site_url('dashboardCS/kelola_rs');?>" class="btn btn-primary">Kelola Rumah Sakit</a>
                                 </div>
                             </div>
                         </div>

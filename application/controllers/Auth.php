@@ -70,7 +70,7 @@ class Auth extends CI_Controller {
 		$this->session->set_userdata('alamat_rs',$getDataRS->alamat_rs);
 		$this->session->set_userdata('telepon_rs',$getDataRS->telepon_rs);
 
-		redirect('app/dashboard_rs');
+		redirect('dashboardCS/dashboard_rs');
 	}
 
 	//////////////////
@@ -108,7 +108,7 @@ class Auth extends CI_Controller {
 		          'id_rs' => $id
 		          );
 		      $this->crud_m->updateData('rumahsakit',$data,$where);
-		      redirect('app/kelola_rs');
+		      redirect('dashboardCS/kelola_rs');
 	}
 
 	public function aktivasi_rs($id)
@@ -120,7 +120,7 @@ class Auth extends CI_Controller {
 		          'id_rs' => $id
 		          );
 		      $this->crud_m->updateData('rumahsakit',$data,$where);
-		      redirect('app/kelola_rs');
+		      redirect('dashboardCS/kelola_rs');
 	}
 
 
@@ -150,7 +150,7 @@ class Auth extends CI_Controller {
 		          'id_rs' => $this->session->userdata('id_rs')
 		          );
 		      $this->crud_m->updateData('rumahsakit',$data,$where);
-		      redirect('app/dashboard_rs');
+		      redirect('dashboardCS/dashboard_rs');
 	}
 
 	public function tutup_rs()
@@ -162,7 +162,7 @@ class Auth extends CI_Controller {
 		          'id_rs' => $this->session->userdata('id_rs')
 		          );
 		      $this->crud_m->updateData('rumahsakit',$data,$where);
-		      redirect('app/dashboard_rs');
+		      redirect('dashboardCS/dashboard_rs');
 	}
 
 	public function edit_api($id_rs)
@@ -198,7 +198,7 @@ class Auth extends CI_Controller {
 		          );
 
 		$this->crud_m->updateData('rumahsakit',$data,$where);
-		redirect('app/dashboard_rs');
+		redirect('dashboardCS/dashboard_rs');
 	}
 
 	public function kelola_poli()
@@ -227,7 +227,7 @@ class Auth extends CI_Controller {
 		);
 		$this->crud_m->insertData('poliklinik',$data);
 
-		redirect('app/kelola_poli');
+		redirect('dashboardCS/kelola_poli');
 	}
 
 	public function hapus_poli($id_poli)
@@ -236,7 +236,7 @@ class Auth extends CI_Controller {
 			'id_poli' => $id_poli
 		);
 		$this->crud_m->deleteData('poliklinik',$where);
-		redirect('app/kelola_poli');
+		redirect('dashboardCS/kelola_poli');
 	}
 
 	public function edit_poli($id_poli)
@@ -272,7 +272,7 @@ class Auth extends CI_Controller {
 		          );
 
 		$this->crud_m->updateData('poliklinik',$data,$where);
-		redirect('app/kelola_poli');
+		redirect('dashboardCS/kelola_poli');
 	}
 
 	public function kelola_dokter()
@@ -303,7 +303,7 @@ class Auth extends CI_Controller {
 		);
 		$this->crud_m->insertData('dokter',$data);
 
-		redirect('app/kelola_dokter');
+		redirect('dashboardCS/kelola_dokter');
 	}
 
 	public function hapus_dokter($id_dokter)
@@ -312,7 +312,7 @@ class Auth extends CI_Controller {
 			'id_dokter' => $id_dokter
 		);
 		$this->crud_m->deleteData('dokter',$where);
-		redirect('app/kelola_dokter');
+		redirect('dashboardCS/kelola_dokter');
 	}
 
 	public function edit_dokter($id_dokter)
@@ -349,7 +349,7 @@ class Auth extends CI_Controller {
 		          );
 
 		$this->crud_m->updateData('dokter',$data,$where);
-		redirect('app/kelola_dokter');
+		redirect('dashboardCS/kelola_dokter');
 	}
 
 	public function kelola_jadwal()
@@ -374,7 +374,7 @@ class Auth extends CI_Controller {
 			'id_jadwal' => $id_jadwal
 		);
 		$this->crud_m->deleteData('jadwal',$where);
-		redirect('app/kelola_jadwal');
+		redirect('dashboardCS/kelola_jadwal');
 	}
 
 	public function tambah_jadwal()
@@ -404,7 +404,7 @@ class Auth extends CI_Controller {
 		);
 		$this->crud_m->insertData('jadwal',$data);
 
-		redirect('app/kelola_jadwal');
+		redirect('dashboardCS/kelola_jadwal');
 	}
 
 	public function edit_jadwal($id_jadwal)
@@ -444,7 +444,7 @@ class Auth extends CI_Controller {
 		          );
 
 		$this->crud_m->updateData('jadwal',$data,$where);
-		redirect('app/kelola_jadwal');
+		redirect('dashboardCS/kelola_jadwal');
 	}
 
 
@@ -477,7 +477,7 @@ class Auth extends CI_Controller {
 		);
 		$this->crud_m->insertData('cs',$data);
 
-		redirect('app/kelola_cs');
+		redirect('dashboardCS/kelola_cs');
 	}
 
 	public function edit_cs($id_cs)
@@ -516,7 +516,7 @@ class Auth extends CI_Controller {
 		          );
 
 		$this->crud_m->updateData('cs',$data,$where);
-		redirect('app/kelola_cs');
+		redirect('dashboardCS/kelola_cs');
 	}
 
 	public function filter()
@@ -586,7 +586,7 @@ class Auth extends CI_Controller {
 		          );
 
 		$this->crud_m->updateData('rumahsakit',$data,$where);
-		redirect('app/profil_rs');
+		redirect('dashboardCS/profil_rs');
 	}
 
 	//////////////////
@@ -609,7 +609,7 @@ class Auth extends CI_Controller {
 	// 		$this->session->set_userdata('password_cs',$getDataCS->password_cs);
 	// 		$this->session->set_userdata('id_rs',$getDataCS->id_rs);
 	
-	// 		redirect('app/dashboard_cs');
+	// 		redirect('dashboardCS/dashboard_cs');
 	// 	}
 		
 	// }
@@ -845,7 +845,7 @@ class Auth extends CI_Controller {
 
 
 
-	// 	redirect('app/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal);
+	// 	redirect('dashboardCS/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal);
 		
 	// }
 
@@ -924,7 +924,7 @@ $html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Te
 		$name = '/TIKET-'.$today.'-'.$id_rs.$id_poli.$id_jadwal.'-'.$no_antrian.'.pdf';
 		$dest = 'I'; //'I','F','D'
 		$pdf->Output($name,$dest);*/
-		redirect('app/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal.'/1');
+		redirect('dashboardCS/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal.'/1');
 		
 	}
 
@@ -963,7 +963,7 @@ $html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Te
 		}
 
 		
-		redirect('app/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal);
+		redirect('dashboardCS/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal);
 	}
 
 
