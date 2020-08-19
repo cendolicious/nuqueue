@@ -75,6 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <!-- END PAGE HEADER-->
                     <div class="row">
                     <div id="antrian_lists" class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <div id="antrian_container">
                         <?php
                         $cnt=0;
                         foreach ($data_poli->result() as $key) {
@@ -105,7 +106,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         }
                         ?>
                         </div>
-                        <div >
+                        </div>
                         <iframe class="col-lg-4 col-md-4 col-sm-4 col-xs-4" width="100%"
                         src="https://www.youtube.com/embed/tgbNymZ7vqY">
                         </iframe>
@@ -185,7 +186,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 $(document).ready(function() {
                     setInterval(function(){
-                        $('#antrian_lists').load(document.URL +  ' #antrian_lists');
+                        $('#antrian_container').load(document.URL +  ' #antrian_container');
                     }, 1000);
                     
                 });
