@@ -408,6 +408,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(0)+".wav");
         }
 
+        if (noAntrianArray[0]=="GIG"){
+            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/poli_gigi.wav");
+        } 
+        else if (noAntrianArray[0]=="INT"){
+            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/poli_interna.wav");
+        } 
+        else if (noAntrianArray[0]=="ANA"){
+            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/poli_anak.wav");
+        } 
+        else if (noAntrianArray[0]=="BED"){
+            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/poli_bedah.wav");
+        }
+        else if (noAntrianArray[0]=="OBG"){
+            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/poli_kandungan.wav");
+        }
+        else if (noAntrianArray[0]=="SAR"){
+            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/poli_saraf.wav");
+        }
+
 
 
         // $noantriannomor = str_split($noantrian_array[1]);
