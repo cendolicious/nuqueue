@@ -99,7 +99,7 @@
                
              <div class="form-row">
                <div class="form-group col-md-12">
-                 <button onClick="window.location.reload();" id="btnPasienLama" type="submit" class="btn btn-primary col-md-12">Daftar</button></div>
+                 <button onClick="window.location = '<?php echo site_url('dashboardCS/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal.'/') ?>'" id="btnPasienLama" type="submit" class="btn btn-primary col-md-12">Daftar</button></div>
              </div>
            </form>
        </div>
