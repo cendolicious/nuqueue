@@ -63,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="clearfix"> </div>
         <!-- END HEADER & CONTENT DIVIDER -->
         <!-- BEGIN CONTAINER -->
-        <div class="page-container" style="height: 100vh; margin-top:0;">
+        <div class="page-container" style="min-height: 100vh; margin-top:0;">
             <!-- BEGIN SIDEBAR -->
             <!-- END SIDEBAR -->
             <!-- BEGIN CONTENT -->
