@@ -357,7 +357,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <script type="text/javascript">
     $(document).ready(function() {
 
-    var audioFiles = ["<?php echo base_url(); ?>assets/global/wav/a.wav", "http://www.magnac.com/sounds/paradiserowlarge.mp3", "http://www.magnac.com/sounds/lordslarge.mp3"];
+    var audioFiles = ["<?php echo base_url(); ?>assets/global/wav/a.wav"];
     var audio = document.createElement("audio");
     var audioIdx = 0;
 
