@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <head>
         <meta charset="utf-8" />
-        <meta http-equiv="refresh" content="1">
+        <!-- <meta http-equiv="refresh" content="1"> -->
         <title>Dashboard CS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -74,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <!-- END PAGE HEADER-->
                     <div class="row">
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <div id="antrian_lists" class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                         <?php
                         $cnt=0;
                         foreach ($data_poli->result() as $key) {
@@ -97,7 +97,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <?php
                             $cnt++;
-                            if ($cnt%3==0){
+                            if ($cnt%2==0){
                         ?>
                                 <div class="w-100 d-none d-md-block"></div>
                         <?php
@@ -106,7 +106,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         ?>
                         </div>
                         <div >
-                        <iframe class="col-lg-4 col-md-4 col-sm-4 col-xs-4"
+                        <iframe class="col-lg-4 col-md-4 col-sm-4 col-xs-4" width="100%"
                         src="https://www.youtube.com/embed/tgbNymZ7vqY">
                         </iframe>
                     <!-- END CONTENT BODY -->
@@ -180,6 +180,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <script src="<?php echo base_url(); ?>assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
             <script src="<?php echo base_url(); ?>assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
             <!-- END THEME LAYOUT SCRIPTS -->
+            <script type="text/javascript">
+
+
+                $(document).ready(function() {
+                    setInterval(function(){
+                        $('#antrian_lists').load(document.URL +  ' #antrian_lists');
+                    }, 1000);
+                    
+                });
+
+            </script>
+            
+
     </body>
+
+    
 
 </html>
