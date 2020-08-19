@@ -437,7 +437,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         audio.addEventListener('ended', function () {
             audioIdx++;
-            if (audioIdx >= audioFiles.length) this.volume=1;
+            if (audioIdx >= audioFiles.length-1) this.volume=1;
 
             this.src = audioFiles[audioIdx];
             this.play();
