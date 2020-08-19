@@ -80,7 +80,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         $cnt=0;
                         foreach ($data_poli->result() as $key) {
                         ?>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                             <div class="dashboard-stat2 text-center border border-info">
                                 
                                <h2><?php echo $key->nama_poliklinik ?></h2>
@@ -107,8 +107,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         ?>
                         </div>
                         </div>
-                        <iframe class="col-lg-4 col-md-4 col-sm-4 col-xs-4" width="100%"
-                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        <iframe class="col-lg-4 col-md-12 col-sm-12 col-xs-12" width="100%"
+                        src="https://www.youtube.com/embed?listType=playlist&list=PL6xKSnD1nKIOppfaI2fejI1IPhsYa2km_&autoplay=1" frameborder=0>
                         </iframe>
                     <!-- END CONTENT BODY -->
                     </div>
