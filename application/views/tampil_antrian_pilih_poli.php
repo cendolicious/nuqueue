@@ -185,9 +185,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
                 $(document).ready(function() {
-                    setInterval(function(){
-                        $('#antrian_container').load(document.URL +  ' #antrian_container');
-                    }, 1000);
+                    // setInterval(function(){
+                    //     $('#antrian_container').load(document.URL +  ' #antrian_container');
+                    // }, 1000);
                     
                 });
 
