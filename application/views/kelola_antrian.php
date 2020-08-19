@@ -370,9 +370,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+c.toLowerCase()+".wav");
         }
 
-        for (let c of noAntrianArray[1]) {
-            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+c.toLowerCase()+".wav");
+        var angka = noAntrianArray[1];
+
+        if (angka.length == 3){
+            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(0)+"00.wav"); //400
+            if (angka.charAt(1)=="1" && angka.charAt(2)!="0" ){ //411
+                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(1)+""+angka.charAt(2)+".wav");
+            }
+            else if (angka.charAt(1)!="0" && angka.charAt(2)=="0" ){ //410, 420
+                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(1)+"0.wav");
+            }
+            else if (angka.charAt(1)=="0" && angka.charAt(2)!="0" ){ //401
+                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(2)+".wav");
+            }
+            else if (angka.charAt(1)!="0" && angka.charAt(2)!="0" ){ //425
+                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(1)+"0.wav");
+                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(2)+".wav");
+            }
+            
         }
+
+        if (angka.length == 2){
+            if (angka.charAt(0)=="1" && angka.charAt(1)!="0" ){ //11
+                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(0)+""+angka.charAt(1)+".wav");
+            }
+            else if (angka.charAt(0)!="0" && angka.charAt(1)=="0" ){ //10, 20
+                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(0)+"0.wav");
+            }
+            else if (angka.charAt(0)!="0" && angka.charAt(0)!="0" ){ //25
+                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(0)+"0.wav");
+                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(1)+".wav");
+            }
+            
+        }
+
+        if (angka.length == 1){
+            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(0)+".wav");
+        }
+
 
 
         // $noantriannomor = str_split($noantrian_array[1]);
