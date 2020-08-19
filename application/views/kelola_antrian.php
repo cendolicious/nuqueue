@@ -357,6 +357,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
              <script src="<?php echo base_url(); ?>assets/global/foundation-datepicker-master/js/foundation-datepicker.min.js" type="text/javascript"></script>
             <!-- END THEME LAYOUT SCRIPTS -->
             <script type="text/javascript">
+
+            
     $(document).ready(function() {
 
     called = <?php echo $called; ?>;
@@ -428,22 +430,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         }
 
 
-
-        // $noantriannomor = str_split($noantrian_array[1]);
-        // foreach($myArray as $character){
-        //     echo $character . "<br>";
-        // }
-
-
-
-
         var audio = document.createElement("audio");
         var audioIdx = 0;
+
+        audio.volume=0.7;
 
         audio.addEventListener('ended', function () {
             audioIdx++;
             // if (audioIdx >= audioFiles.length) audioIdx = 0;
+
             this.src = audioFiles[audioIdx];
+            if(audioIdx == audioFiles.length-1){
+                this.volume=1;
+            }
             this.play();
         });
         audio.src = audioFiles[audioIdx];
