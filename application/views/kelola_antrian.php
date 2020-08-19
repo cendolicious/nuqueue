@@ -357,6 +357,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <script type="text/javascript">
     $(document).ready(function() {
 
+    var audioFiles = ["http://www.magnac.com/sounds/onlyroadlarge.mp3", "http://www.magnac.com/sounds/paradiserowlarge.mp3", "http://www.magnac.com/sounds/lordslarge.mp3"];
+    var audio = document.createElement("audio");
+    var audioIdx = 0;
+
+    audio.addEventListener('ended', function () {
+        audioIdx++;
+        if (audioIdx >= audioFiles.length) audioIdx = 0;
+        this.src = audioFiles[audioIdx];
+        this.play();
+    });
+    audio.src = audioFiles[audioIdx];
+    audio.play();
+
     $('.modal').on('hidden.bs.modal', function(){
         $(this).find('form')[0].reset();
      });
