@@ -433,16 +433,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         var audio = document.createElement("audio");
         var audioIdx = 0;
 
-        audio.volume=0.5;
+        audio.volume=0.1;
 
         audio.addEventListener('ended', function () {
             audioIdx++;
-            // if (audioIdx >= audioFiles.length) audioIdx = 0;
+            if (audioIdx >= audioFiles.length) this.volume=1;
 
             this.src = audioFiles[audioIdx];
-            if(audioIdx == audioFiles.length-1){
-                this.volume=1;
-            }
             this.play();
         });
         audio.src = audioFiles[audioIdx];

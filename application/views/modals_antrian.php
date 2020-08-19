@@ -84,7 +84,7 @@
        </div> -->
 
        <div id="formpasienlama">
-        <form action="<?php echo site_url('dashboardCS/pasien_lama_onsite') ?>" method="post" target="_blank">
+        <form id="submit" action="<?php echo site_url('dashboardCS/pasien_lama_onsite') ?>" method="post" target="_blank">
           <input type="hidden" name="tipe_daftar" value="2"/>
               <input type="hidden" name="id_poli" value="<?php echo $id_poli;?>"/>
               <input type="hidden" name="kode_poli" value="<?php echo $kode_poli;?>"/>
@@ -99,7 +99,7 @@
                
              <div class="form-row">
                <div class="form-group col-md-12">
-                 <button onClick="window.location = '<?php echo site_url('dashboardCS/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal.'/') ?>'" id="btnPasienLama" type="submit" class="btn btn-primary col-md-12">Daftar</button></div>
+                 <button onClick="$('#submit').submit(); window.location = '<?php echo site_url('dashboardCS/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal.'/') ?>'" id="btnPasienLama" type="submit" class="btn btn-primary col-md-12">Daftar</button></div>
              </div>
            </form>
        </div>
