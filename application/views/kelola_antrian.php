@@ -362,11 +362,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     called = <?php echo $called; ?>;
     if (called == 1) {
 
-        var audioFiles = [];
+        var audioFiles = ["<?php echo base_url(); ?>assets/global/wav/antrian.wav"];
 
         var noAntrianArray = "<?php echo $diperiksa; ?>".split("-");
-        
+
         for (let c of noAntrianArray[0]) {
+            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+c.toLowerCase()+".wav");
+        }
+
+        for (let c of noAntrianArray[1]) {
             audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+c.toLowerCase()+".wav");
         }
 
