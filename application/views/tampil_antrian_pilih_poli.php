@@ -37,7 +37,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link href="<?php echo base_url(); ?>assets/layouts/layout2/css/themes/blue.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <link href="<?php echo base_url(); ?>assets/layouts/layout2/css/custom.min.css" rel="stylesheet" type="text/css" />
         <!-- END THEME LAYOUT STYLES -->
-        <link rel="shortcut icon" href="favicon.ico" /> </head>
+        <link rel="shortcut icon" href="favicon.ico" />
+        <style>
+        .video-responsive{
+            overflow:hidden;
+            padding-bottom:56.25%;
+            position:relative;
+            height:0;
+        }
+        .video-responsive iframe{
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            position:absolute;
+        }
+        </style>
+         </head>
     <!-- END HEAD -->
 
     <body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid">
@@ -107,9 +123,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         ?>
                         </div>
                         </div>
-                        <iframe class="col-lg-4 col-md-12 col-sm-12 col-xs-12" width="100%"
-                        src="https://www.youtube.com/embed?listType=playlist&list=PL6xKSnD1nKIOppfaI2fejI1IPhsYa2km_&autoplay=1" frameborder=0>
-                        </iframe>
+                        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                            <div class="video-responsive">
+                                <iframe width="420" height="315"
+                                src="https://www.youtube.com/embed?listType=playlist&list=PL6xKSnD1nKIOppfaI2fejI1IPhsYa2km_&autoplay=1&loop=1" frameborder=0>
+                                </iframe>
+                            </div>
+                        </div>
+                        
                     <!-- END CONTENT BODY -->
                     </div>
            
