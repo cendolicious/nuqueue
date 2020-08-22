@@ -279,6 +279,7 @@ class DashboardCS extends CI_Controller
 			"id_jadwal" => $id_jadwal,
 			"no_antrian" => $kode_poli . '-' . $no_antrian,
 			"tipe_daftar" => $tipe_daftar,
+			"tgl_periksa" => date('Y-m-d'),
 			"nik" => $nik_pasien
 		);
 		$this->crud_m->insertData('tbl_antrian', $data2);
