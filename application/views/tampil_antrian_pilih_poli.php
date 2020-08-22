@@ -205,12 +205,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <script type="text/javascript">
 
 
-                // $(document).ready(function() {
-                //     setInterval(function(){
-                //         $('#antrian_container').load(document.URL +  ' #antrian_container');
-                //     }, 1000);
+                $(document).ready(function() {
+                    setInterval(function(){
+                        $('#antrian_container').load(document.URL +  ' #antrian_container');
+                    }, 1000);
                     
-                // });
+                });
 
             </script>
             
