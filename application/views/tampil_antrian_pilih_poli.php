@@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 foreach ($data_antrian->result() as $key2) {
                                     if ($key->id_poliklinik == $key2->id_poli) {
                                 ?>
-                                    <h1 class="font-weight-bolder alert alert-info"><?php echo $key2->no_antrian ?></h>
+                                    <h1 class="font-weight-bolder alert alert-info"><?php echo $key2->no_antrian ?></h1>
                                 <?php
                                    }
                                 }
@@ -205,12 +205,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <script type="text/javascript">
 
 
-                $(document).ready(function() {
-                    setInterval(function(){
-                        $('#antrian_container').load(document.URL +  ' #antrian_container');
-                    }, 1000);
+                // $(document).ready(function() {
+                //     setInterval(function(){
+                //         $('#antrian_container').load(document.URL +  ' #antrian_container');
+                //     }, 1000);
                     
-                });
+                // });
 
             </script>
             
