@@ -98,8 +98,8 @@ class DashboardCS extends CI_Controller
 
 				$html .= '<br><hr><hr><hr><br>';
 				$html .= '<br><br><h6 style="color:black;text-align:center;">*Tiket ini hanya berlaku selama 1 hari*</h6>';
-				$html .= '<br><br><h4 style="color:black;text-align:center;">--------------</h4>';
-				$html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Terintegrasi</h5>';
+				// $html .= '<br><br><h4 style="color:black;text-align:center;">--------------</h4>';
+				// $html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Terintegrasi</h5>';
 
 				$ln = true;
 				$fill = false;
