@@ -272,7 +272,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                                          <button type="submit" role="button" class="btn btn-lg btn-primary">Panggil Antrian Selanjutnya</button>
                                     </form>
-                                        <button id="recall" type="button" name="button"  class="btn btn-lg btn-info">Panggil Lagi</button>
+                                        <br><button id="recall" type="button" name="button"  class="btn btn-lg btn-info">Panggil Lagi</button>
                                    <br><br>
                                        <button type="button" name="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary"><div class="glyphicon glyphicon-plus"></div> Daftar Antrian</button>
                                     </div>
