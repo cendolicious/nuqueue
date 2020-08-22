@@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 foreach ($data_antrian->result() as $key2) {
                                     if ($key->id_poliklinik == $key2->id_poli) {
                                 ?>
-                                    <h1 class="font-weight-bolder alert alert-info"><?php echo $key2->no_antrian ?></h1>
+                                    <h1 class="font-weight-bolder alert alert-info" style="font-size:100px;"><?php echo $key2->no_antrian ?></h1>
                                 <?php
                                    }
                                 }
