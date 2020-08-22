@@ -272,7 +272,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                                          <button type="submit" role="button" class="btn btn-lg btn-primary">Panggil Antrian Selanjutnya</button>
                                     </form>
-                                        <button onclick="recall()" id="recall" type="button" name="button"  class="btn btn-lg btn-info">Panggil Lagi</button>
+                                        <button id="recall" type="button" name="button"  class="btn btn-lg btn-info">Panggil Lagi</button>
                                    <br><br>
                                        <button type="button" name="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary"><div class="glyphicon glyphicon-plus"></div> Daftar Antrian</button>
                                     </div>
@@ -364,88 +364,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     called = <?php echo $called; ?>;
     if (called == 1) {
-
-        var audioFiles = ["<?php echo base_url(); ?>assets/global/wav/antrian.wav"];
-
-        var noAntrianArray = "<?php echo $diperiksa; ?>".split("-");
-
-        for (let c of noAntrianArray[0]) {
-            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+c.toLowerCase()+".wav");
-        }
-
-        var angka = noAntrianArray[1];
-
-        if (angka.length == 3){
-            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(0)+"00.wav"); //400
-            if (angka.charAt(1)=="1" && angka.charAt(2)!="0" ){ //411
-                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(1)+""+angka.charAt(2)+".wav");
-            }
-            else if (angka.charAt(1)!="0" && angka.charAt(2)=="0" ){ //410, 420
-                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(1)+"0.wav");
-            }
-            else if (angka.charAt(1)=="0" && angka.charAt(2)!="0" ){ //401
-                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(2)+".wav");
-            }
-            else if (angka.charAt(1)!="0" && angka.charAt(2)!="0" ){ //425
-                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(1)+"0.wav");
-                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(2)+".wav");
-            }
-            
-        }
-
-        if (angka.length == 2){
-            if (angka.charAt(0)=="1" && angka.charAt(1)!="0" ){ //11
-                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(0)+""+angka.charAt(1)+".wav");
-            }
-            else if (angka.charAt(0)!="0" && angka.charAt(1)=="0" ){ //10, 20
-                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(0)+"0.wav");
-            }
-            else if (angka.charAt(0)!="0" && angka.charAt(0)!="0" ){ //25
-                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(0)+"0.wav");
-                audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(1)+".wav");
-            }
-            
-        }
-
-        if (angka.length == 1){
-            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/"+angka.charAt(0)+".wav");
-        }
-
-        if (noAntrianArray[0]=="GIG"){
-            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/poli_gigi.wav");
-        } 
-        else if (noAntrianArray[0]=="INT"){
-            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/poli_interna.wav");
-        } 
-        else if (noAntrianArray[0]=="ANA"){
-            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/poli_anak.wav");
-        } 
-        else if (noAntrianArray[0]=="BED"){
-            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/poli_bedah.wav");
-        }
-        else if (noAntrianArray[0]=="OBG"){
-            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/poli_kandungan.wav");
-        }
-        else if (noAntrianArray[0]=="SAR"){
-            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/poli_saraf.wav");
-        }
-
-
-        var audio = document.createElement("audio");
-        var audioIdx = 0;
-
-        audio.volume=0.1;
-
-        audio.addEventListener('ended', function () {
-            audioIdx++;
-            if (audioIdx >= audioFiles.length-1) this.volume=1;
-
-            this.src = audioFiles[audioIdx];
-            this.play();
-        });
-        audio.src = audioFiles[audioIdx];
-        audio.play();
+        recall();
     }
+
+    $( "#recall" ).click(function() {
+        recall();
+    });
 
     function recall(){
         var audioFiles = ["<?php echo base_url(); ?>assets/global/wav/antrian.wav"];
