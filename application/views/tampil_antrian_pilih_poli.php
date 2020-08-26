@@ -254,7 +254,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                 function onPlayerReady(event) {
                     console.log("cek0");
-                    player.setVolume(40);
+                    player.setVolume(20);
                     player.loadPlaylist({
                         list: "PL6xKSnD1nKIOppfaI2fejI1IPhsYa2km_",
                         listType: "playlist",
@@ -272,11 +272,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 }
 
                 function pauseVideo() {
-                    player.setVolume(5);
+                    player.setVolume(1);
                 }
 
                 function playVideo() {
-                    player.setVolume(40);
+                    player.setVolume(20);
                 }
             </script>
 
