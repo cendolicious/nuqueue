@@ -363,7 +363,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <script type="text/javascript">
                 $(document).ready(function() {
 
-                    $("#no_nik_lama").focus(function() {
+                    $("#no_nik_lama").change(function() {
+                        console.log("cek");
                         if ($(this).val().length == 8 || $(this).val().length == 16) {
                             $("#btnPasienLama").prop('disabled', false);
                         }
