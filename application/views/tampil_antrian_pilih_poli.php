@@ -224,7 +224,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     console.log("cek-1");
                     player = new YT.Player('player', {
                         events: {
-                            'onReady': onPlayerReady
+                            'onReady': onPlayerReady,
+                            onError: e => {
+                                // this should fire every time but only fires sometimes 😭
+                                console.log("onError", e.data, id);
+                                this.setState({
+                                    errorData: e.data.toString()
+                                });
+                            }
                         }
                     });
                 }
