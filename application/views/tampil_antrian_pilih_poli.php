@@ -225,7 +225,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     player = new YT.Player('player', {
                         events: {
                             'onReady': onPlayerReady,
-                            onError: e => {
+                            'onError': e => {
                                 // this should fire every time but only fires sometimes 😭
                                 console.log("onError", e.data, id);
                                 this.setState({
