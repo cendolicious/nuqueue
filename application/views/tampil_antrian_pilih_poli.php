@@ -228,6 +228,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 }
 
                 function onPlayerReady(event) {
+                    console.log("cek0");
                     event.target.playVideo();
                     window.addEventListener("storage", function() {
                         console.log("cek1");
