@@ -364,7 +364,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 $(document).ready(function() {
 
                     $("#no_nik_lama").focus(function() {
-                        if ($(this).val().length == 8 || (this).val().length == 16) {
+                        if ($(this).val().length == 8 || $(this).val().length == 16) {
                             $("#btnPasienLama").prop('disabled', false);
                         }
                     });
