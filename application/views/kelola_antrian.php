@@ -346,6 +346,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             if(obj.nama_pasien){
                                 $('#nama_pasien').html(obj.nama_pasien+" lahir pada "+obj.tanggal_lahir);
                                 $('#nama_pasien').show();
+                            } else {
+                                $("#btnPasienLama").prop('disabled', true);
                             }
                         });
                     }
