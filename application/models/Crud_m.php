@@ -106,10 +106,10 @@ class crud_m extends CI_model
     {
         date_default_timezone_set('Asia/Jakarta');
         $today_date = date("Y-m-d");
-        $query = "SELECT DISTINCT a.no_antrian, n.nama_pasien 
+        $query = "SELECT DISTINCT a.no_antrian, n.nama_pasien, a.id_antrian
                     FROM tbl_antrian as a 
                     INNER JOIN tbl_pasien as n ON a.nik = n.nik 
-                    WHERE a.status_antrian = 2 AND a.id_jadwal = $id_jadwal AND a.tgl_periksa LIKE '$today_date%' ORDER BY a.no_antrian";
+                    WHERE a.status_antrian = 2 AND a.id_jadwal = $id_jadwal AND a.tgl_periksa LIKE '$today_date%' ORDER BY a.id_antrian";
         return $this->db->query($query);
     }
 
