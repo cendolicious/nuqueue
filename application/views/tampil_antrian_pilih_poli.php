@@ -126,7 +126,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                         <div class="video-responsive">
-                            <iframe id="player" width="420" height="315" src="https://www.youtube.com/embed?listType=playlist&list=PL6xKSnD1nKIOppfaI2fejI1IPhsYa2km_&autoplay=1&loop=1&rel=0&controls=0&modestbranding=1&origin=<?php echo site_url(); ?>" enablejsapi="1" frameborder="0">
+                            <div id="player"></div>
+                            <!-- <iframe id="player" width="420" height="315" src="https://www.youtube.com/embed?listType=playlist&list=PL6xKSnD1nKIOppfaI2fejI1IPhsYa2km_&autoplay=1&loop=1&rel=0&controls=0&modestbranding=1&origin=<?php echo site_url(); ?>" enablejsapi="1" frameborder="0"> -->
                             </iframe>
                         </div>
                     </div>
@@ -223,43 +224,55 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 function onYouTubeIframeAPIReady() {
                     console.log("cek-1");
                     player = new YT.Player('player', {
-                        events: {
-                            'onReady': function(){
-                                console.log("test");
-                            },
-                            'onError': e => {
-                                // this should fire every time but only fires sometimes 😭
-                                console.log("onError", e.data, id);
-                                this.setState({
-                                    errorData: e.data.toString()
-                                });
+                            videoId: '34xO919uKdY', // Specific your video ID http://www.youtube.com/embed/videoIDHere
+                            width: '560', // Specific width
+                            height: '315', // Specific height
+                            playerVars: {
+                                end: 0,
+                                autoplay: 1,
+                                loop: 0,
+                                controls: 0,
+                                showinfo: 0,
+                                modestbranding: 1,
+                                fs: 0,
+                                cc_load_policty: 0,
+                                iv_load_policy: 3,
+                                autohide: 0,
+                                events: {
+                                    'onReady': onPlayerReady,
+                                    'onError': e => {
+                                        // this should fire every time but only fires sometimes 😭
+                                        console.log("onError", e.data, id);
+                                        this.setState({
+                                            errorData: e.data.toString()
+                                        });
+                                    }
+                                }
+                            });
+                    }
+
+                    function onPlayerReady(event) {
+                        console.log("cek0");
+                        event.target.playVideo();
+                        window.addEventListener("storage", function() {
+                            console.log("cek1");
+                            if (localStorage.getItem('panggil') == 1) {
+                                console.log("cek2");
+                                pauseVideo();
+                            } else {
+                                console.log("cek3");
+                                playVideo();
                             }
-                        }
-                    });
-                }
+                        }, false);
+                    }
 
-                function onPlayerReady(event) {
-                    console.log("cek0");
-                    event.target.playVideo();
-                    window.addEventListener("storage", function() {
-                        console.log("cek1");
-                        if (localStorage.getItem('panggil') == 1) {
-                            console.log("cek2");
-                            pauseVideo();
-                        } else {
-                            console.log("cek3");
-                            playVideo();
-                        }
-                    }, false);
-                }
+                    function pauseVideo() {
+                        player.pauseVideo();
+                    }
 
-                function pauseVideo() {
-                    player.pauseVideo();
-                }
-
-                function playVideo() {
-                    player.playVideo();
-                }
+                    function playVideo() {
+                        player.playVideo();
+                    }
             </script>
 
 
