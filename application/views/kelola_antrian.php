@@ -342,9 +342,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             data: "nik=" + nik,
                         }).success(function(data) {
                             var json = data,
-                            obj = JSON.parse(json);
-                            if(obj.nama_pasien){
-                                $('#nama_pasien').html(obj.nama_pasien+" lahir pada "+obj.tanggal_lahir);
+                                obj = JSON.parse(json);
+                            if (obj.nama_pasien) {
+                                $('#nama_pasien').html(obj.nama_pasien + " lahir pada " + obj.tanggal_lahir);
                                 $('#nama_pasien').show();
                             } else {
                                 $("#btnPasienLama").prop('disabled', true);
@@ -425,13 +425,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                         audio.addEventListener('ended', function() {
                             audioIdx++;
-                            if (audioIdx >= audioFiles.length - 1) this.volume = 1;
+                            if (audioIdx >= audioFiles.length - 1) {
+                                this.volume = 1
+                            };
+
+                            if (audioIdx >= audioFiles.length) {
+                                localStorage.setItem("panggil", 0);
+                            };
 
                             this.src = audioFiles[audioIdx];
                             this.play();
                         });
                         audio.src = audioFiles[audioIdx];
                         audio.play();
+                        localStorage.setItem("panggil", 1);
                     }
 
 
