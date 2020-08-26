@@ -229,16 +229,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                 function onPlayerReady(event) {
                     event.target.playVideo();
-                    window.addEventListener("storage", function() {
-                        console.log("cek1");
-                        if (localStorage.getItem('panggil') == 1) {
-                            console.log("cek2");
-                            pauseVideo();
-                        } else {
-                            console.log("cek3");
-                            playVideo();
-                        }
-                    }, false);
                 }
 
                 function pauseVideo() {
@@ -248,6 +238,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 function playVideo() {
                     player.playVideo();
                 }
+
+                window.addEventListener("storage", function() {
+                    console.log("cek1");
+                    if (localStorage.getItem('panggil') == 1) {
+                        console.log("cek2");
+                        pauseVideo();
+                    } else {
+                        console.log("cek3");
+                        playVideo();
+                    }
+                }, false);
             </script>
 
 
