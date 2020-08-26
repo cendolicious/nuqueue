@@ -98,7 +98,7 @@ class crud_m extends CI_model
     {
         date_default_timezone_set('Asia/Jakarta');
         $today_date = date("Y-m-d");
-        $query = "SELECT COUNT(*) as jml_antrian FROM `tbl_antrian` WHERE  id_poli = $id_poli AND id_jadwal = $id_jadwal AND tgl_periksa LIKE '$today_date%'";
+        $query = "SELECT COUNT(*) as jml_antrian FROM `tbl_antrian` WHERE  id_poli = $id_poli AND id_jadwal = $id_jadwal AND tgl_periksa = '$today_date'";
         return $this->db->query($query);
     }
 
@@ -109,7 +109,7 @@ class crud_m extends CI_model
         $query = "SELECT DISTINCT a.no_antrian, n.nama_pasien, a.id_antrian
                     FROM tbl_antrian as a 
                     INNER JOIN tbl_pasien as n ON a.nik = n.nik 
-                    WHERE a.status_antrian = 2 AND a.id_jadwal = $id_jadwal AND a.tgl_periksa LIKE '$today_date%' ORDER BY a.id_antrian";
+                    WHERE a.status_antrian = 2 AND a.id_jadwal = $id_jadwal AND a.tgl_periksa = '$today_date' ORDER BY a.id_antrian";
         return $this->db->query($query);
     }
 
@@ -120,7 +120,7 @@ class crud_m extends CI_model
         $query = "SELECT a.no_antrian, n.nama_pasien 
                     FROM tbl_antrian as a 
                     INNER JOIN tbl_pasien as n ON a.nik = n.nik 
-                    WHERE a.status_antrian = 1 AND a.id_jadwal = $id_jadwal AND a.tgl_periksa LIKE '$today_date%'  ";
+                    WHERE a.status_antrian = 1 AND a.id_jadwal = $id_jadwal AND a.tgl_periksa = '$today_date'  ";
         return $this->db->query($query);
     }
 
@@ -129,7 +129,7 @@ class crud_m extends CI_model
     {
         date_default_timezone_set('Asia/Jakarta');
         $today_date = date("Y-m-d");
-        $query  = "SELECT * FROM tbl_antrian WHERE status_antrian = 1 AND id_jadwal = $id_jadwal AND tgl_periksa LIKE '$today_date%'";
+        $query  = "SELECT * FROM tbl_antrian WHERE status_antrian = 1 AND id_jadwal = $id_jadwal AND tgl_periksa = '$today_date'";
         return $this->db->query($query);
     }
 
