@@ -203,32 +203,29 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <script src="<?php echo base_url(); ?>assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
             <!-- END THEME LAYOUT SCRIPTS -->
             <script type="text/javascript">
-                 var player;
+                var tag = document.createElement('script');
+
+                tag.src = "https://www.youtube.com/iframe_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                var player;
                 $(document).ready(function() {
                     setInterval(function() {
                         $('#antrian_container').load(document.URL + ' #antrian_container');
                     }, 1000);
 
                     function onYouTubeIframeAPIReady() {
-                    console.log("cek-1");
-                    player = new YT.Player('player', {
-                        events: {
-                            'onReady': onPlayerReady
-                        }
-                    });
-                }
+                        console.log("cek-1");
+                        player = new YT.Player('player', {
+                            events: {
+                                'onReady': onPlayerReady
+                            }
+                        });
+                    }
 
                 });
             </script>
             <script>
-                var tag = document.createElement('script');
-
-                tag.src = "https://www.youtube.com/iframe_api";
-                var firstScriptTag = document.getElementsByTagName('script')[0];
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-               
-
                 function onPlayerReady(event) {
                     console.log("cek0");
                     event.target.playVideo();
