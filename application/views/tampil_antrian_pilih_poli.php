@@ -126,7 +126,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                         <div class="video-responsive">
-                            <iframe id="player" width="420" height="315" src="https://www.youtube.com/embed?listType=playlist&list=PL6xKSnD1nKIOppfaI2fejI1IPhsYa2km_&autoplay=1&loop=1&rel=0&controls=0&modestbranding=1&origin=<?php echo site_url(); ?>" frameborder=0>
+                            <iframe id="player" width="420" height="315" src="https://www.youtube.com/embed?listType=playlist&list=PL6xKSnD1nKIOppfaI2fejI1IPhsYa2km_&autoplay=1&loop=1&rel=0&controls=0&modestbranding=1&origin=<?php echo site_url(); ?>" enablejsapi="1" frameborder="0">
                             </iframe>
                         </div>
                     </div>
