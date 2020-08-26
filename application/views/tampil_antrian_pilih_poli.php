@@ -224,55 +224,59 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 function onYouTubeIframeAPIReady() {
                     console.log("cek-1");
                     player = new YT.Player('player', {
-                            videoId: '34xO919uKdY', // Specific your video ID http://www.youtube.com/embed/videoIDHere
-                            width: '560', // Specific width
-                            height: '315', // Specific height
-                            playerVars: {
-                                end: 0,
-                                autoplay: 1,
-                                loop: 0,
-                                controls: 0,
-                                showinfo: 0,
-                                modestbranding: 1,
-                                fs: 0,
-                                cc_load_policty: 0,
-                                iv_load_policy: 3,
-                                autohide: 0},
-                                events: {
-                                    'onReady': onPlayerReady,
-                                    'onError': e => {
-                                        // this should fire every time but only fires sometimes 😭
-                                        console.log("onError", e.data, id);
-                                        this.setState({
-                                            errorData: e.data.toString()
-                                        });
-                                    }
-                                }
-                            });
-                    }
-
-                    function onPlayerReady(event) {
-                        console.log("cek0");
-                        event.target.playVideo();
-                        window.addEventListener("storage", function() {
-                            console.log("cek1");
-                            if (localStorage.getItem('panggil') == 1) {
-                                console.log("cek2");
-                                pauseVideo();
-                            } else {
-                                console.log("cek3");
-                                playVideo();
+                        // videoId: '34xO919uKdY', // Specific your video ID http://www.youtube.com/embed/videoIDHere
+                        width: '560', // Specific width
+                        height: '315', // Specific height
+                        playerVars: {
+                            end: 0,
+                            autoplay: 1,
+                            loop: 0,
+                            controls: 0,
+                            showinfo: 0,
+                            modestbranding: 1,
+                            fs: 0,
+                            cc_load_policty: 0,
+                            iv_load_policy: 3,
+                            autohide: 0
+                        },
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onError': e => {
+                                // this should fire every time but only fires sometimes 😭
+                                console.log("onError", e.data, id);
+                                this.setState({
+                                    errorData: e.data.toString()
+                                });
                             }
-                        }, false);
-                    }
+                        }
+                    });
+                }
 
-                    function pauseVideo() {
-                        player.pauseVideo();
-                    }
+                function onPlayerReady(event) {
+                    console.log("cek0");
+                    player.loadPlaylist({
+                        list: "PL6xKSnD1nKIOppfaI2fejI1IPhsYa2km_",
+                        listType: "playlist",
+                    })
+                    window.addEventListener("storage", function() {
+                        console.log("cek1");
+                        if (localStorage.getItem('panggil') == 1) {
+                            console.log("cek2");
+                            pauseVideo();
+                        } else {
+                            console.log("cek3");
+                            playVideo();
+                        }
+                    }, false);
+                }
 
-                    function playVideo() {
-                        player.playVideo();
-                    }
+                function pauseVideo() {
+                    player.pauseVideo();
+                }
+
+                function playVideo() {
+                    player.playVideo();
+                }
             </script>
 
 
