@@ -96,7 +96,7 @@
                 <label>NIK Pasien</label>
                 <input type="number" name="nik_pasien" id="no_nik_lama" class="form-control" placeholder="NIK Pasien.." required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="16" />
               </div>
-              <div class="hide form-group col-md-12 alert alert-info " id="nama_pasien"></div>
+              <div class="form-group col-md-12 alert alert-info " id="nama_pasien"></div>
 
               <div class="form-row">
                 <div class="form-group col-md-12">

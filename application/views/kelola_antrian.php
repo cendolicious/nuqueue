@@ -325,7 +325,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <!-- END THEME LAYOUT SCRIPTS -->
             <script type="text/javascript">
                 $(document).ready(function() {
-
+                    $('#nama_pasien').hide();
                     $("#no_nik_lama").on("input", function() {
                         $("#btnPasienLama").prop('disabled', true);
                         $('#nama_pasien').hide();
@@ -342,8 +342,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             data: "nik=" + nik,
                         }).success(function(data) {
                             var json = data,
-                                obj = JSON.parse(json);
-                            $('#nama_pasien').val(obj.nama_pasien+" lahir pada "+obj.tanggal_lahir);
+                            obj = JSON.parse(json);
+                            $('#nama_pasien').html(obj.nama_pasien+" lahir pada "+obj.tanggal_lahir);
                             $('#nama_pasien').show();
                         });
                     }
