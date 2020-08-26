@@ -103,13 +103,7 @@
                   <button disabled onClick="$('#submit').submit(); window.location = '<?php echo site_url('dashboardCS/kelola_antrian_jadwal/' . $id_poli . '/' . $id_jadwal . '/') ?>'" id="btnPasienLama" type="submit" class="btn btn-primary col-md-12">Daftar</button></div>
               </div>
             </form>
-            <script>
-                $("#no_nik_lama").focus(function() {
-                  if ($("#no_nik_lama").val().length == 8 || ("#no_nik_lama").val().length == 16) {
-                    $("#btnPasienLama").attr('disabled', false);
-                  }
-                });
-            </script>
+
           </div>
 
         </div>
@@ -121,4 +115,14 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(document).ready(function() {
+    $("#no_nik_lama").focus(function() {
+      if ($(this).val().length == 8 || (this).val().length == 16) {
+        $("#btnPasienLama").attr('disabled', false);
+      }
+    });
+  });
+</script>
 <!-- End Modals-->
