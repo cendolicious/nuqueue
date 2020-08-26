@@ -115,14 +115,4 @@
     </div>
   </div>
 </div>
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    $("#no_nik_lama").focus(function() {
-      if ($(this).val().length == 8 || (this).val().length == 16) {
-        $("#btnPasienLama").attr('disabled', false);
-      }
-    });
-  });
-</script>
 <!-- End Modals-->
