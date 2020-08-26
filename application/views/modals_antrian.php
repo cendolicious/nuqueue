@@ -96,7 +96,7 @@
                 <label>NIK Pasien</label>
                 <input type="number" name="nik_pasien" id="no_nik_lama" class="form-control" placeholder="NIK Pasien.." required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="16" />
               </div>
-              <div class="alert alert-info" id="nama_pasien"></div>
+              <div class="hide form-group col-md-12 alert alert-info " id="nama_pasien"></div>
 
               <div class="form-row">
                 <div class="form-group col-md-12">
@@ -105,8 +105,8 @@
             </form>
             <script>
               $(document).ready(function() {
-                $("#no_nik_lama").focus(function() {
-                  if ($(this).val().lenght == 8 || (this).val().lenght == 16) {
+                $("#no_nik_lama").change(function() {
+                  if ($(this).val().length == 8 || (this).val().length == 16) {
                     $("#btnPasienLama").attr('disabled', false);
                   }
                 });
