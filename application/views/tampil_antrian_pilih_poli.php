@@ -220,6 +220,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 var player;
 
                 function onYouTubeIframeAPIReady() {
+                    console.log("cek0");
                     player = new YT.Player('player', {
                         events: {
                             'onReady': onPlayerReady
