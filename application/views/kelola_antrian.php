@@ -343,8 +343,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         }).success(function(data) {
                             var json = data,
                             obj = JSON.parse(json);
-                            $('#nama_pasien').html(obj.nama_pasien+" lahir pada "+obj.tanggal_lahir);
-                            $('#nama_pasien').show();
+                            if(obj.nama_pasien){
+                                $('#nama_pasien').html(obj.nama_pasien+" lahir pada "+obj.tanggal_lahir);
+                                $('#nama_pasien').show();
+                            }
                         });
                     }
 
