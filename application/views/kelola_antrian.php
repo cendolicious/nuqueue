@@ -364,6 +364,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 $(document).ready(function() {
 
                     $("#no_nik_lama").on("input", function() {
+                        $("#btnPasienLama").prop('disabled', true);
                         console.log("cek", $("#no_nik_lama").val().length);
                         if ($("#no_nik_lama").val().length == 8 || $("#no_nik_lama").val().length == 16) {
                             $("#btnPasienLama").prop('disabled', false);
