@@ -344,7 +344,8 @@ $html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Te
 			'status_antrian' => 1
 		);
 		$where = array(
-			'no_antrian' => $no_antrian_selanjutnya
+			'no_antrian' => $no_antrian_selanjutnya,
+			'tgl_periksa' => date('Y-m-d'),
 		);
 
 		$cekAntrianSaatIni = $this->crud_m->cekAntrianSaatIni($id_jadwal);
