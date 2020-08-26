@@ -369,4 +369,18 @@ $html .= '<h5 style="color:black;text-align:center;">Sistem Informasi Antrian Te
 
 		redirect('dashboardCS/kelola_antrian_jadwal/' . $id_poli . '/' . $id_jadwal . '/' . 1);
 	}
+
+	function autofill()
+    {
+        $nik = $_GET['nik'];
+        $this->db->where('nik', $nik);
+        $pasien = $this->db->get('tbl_pasien')->row_array();
+
+        $data = array(
+            'nama_pasien'      =>  $pasien['nama_pasien'],
+            'tanggal_lahir'   =>  $pasien['tanggal_lahir'],
+        );
+        echo json_encode($data);
+    }
+
 }

@@ -329,11 +329,25 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                     $("#no_nik_lama").on("input", function() {
                         $("#btnPasienLama").prop('disabled', true);
-                        console.log("cek", $("#no_nik_lama").val().length);
+                        $('#nama_pasien').hide();
                         if ($("#no_nik_lama").val().length == 8 || $("#no_nik_lama").val().length == 16) {
                             $("#btnPasienLama").prop('disabled', false);
+                            autoFill();
                         }
                     });
+
+                    function autoFill() {
+                        var nik = $("#no_nik_lama").val();
+                        $.ajax({
+                            url: "<?php echo base_url() ?>dashboardCS/autofill",
+                            data: "nik=" + nik,
+                        }).success(function(data) {
+                            var json = data,
+                                obj = JSON.parse(json);
+                            $('#nama_pasien').val(obj.nama_pasien+" lahir pada "+obj.tanggal_lahir);
+                            $('#nama_pasien').show();
+                        });
+                    }
 
                     called = <?php echo $called; ?>;
                     if (called == 1) {
