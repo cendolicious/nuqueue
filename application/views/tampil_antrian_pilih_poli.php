@@ -222,20 +222,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 function onYouTubeIframeAPIReady() {
                     player = new YT.Player('player', {
                         events: {
-                            // call this function when player is ready to use
                             'onReady': onPlayerReady
                         }
                     });
                 }
 
-                // 4. The API will call this function when the video player is ready.
                 function onPlayerReady(event) {
                     event.target.playVideo();
                     window.addEventListener("storage", function() {
+                        console.log("cek1");
                         if (localStorage.getItem('panggil') == 1) {
+                            console.log("cek2");
                             pauseVideo();
                         } else {
-                            playVideo()
+                            console.log("cek3");
+                            playVideo();
                         }
                     }, false);
                 }
