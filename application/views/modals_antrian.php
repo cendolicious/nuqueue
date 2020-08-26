@@ -1,18 +1,18 @@
 <!-- Modal -->
- <div id="myModal" class="modal fade" role="dialog">
-   <div class="modal-dialog">
-     <!-- konten modal-->
-     <div class="modal-content">
-       <!-- heading modal -->
-       <div class="modal-header">
-         <button type="button" class="close" data-dismiss="modal">&times;</button>
-         <h4 class="modal-title">Daftar Antrian</h4>
-       </div>
-       <!-- body modal -->
-       <div class="modal-body">
-<div class="bootbox-body row">
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- konten modal-->
+    <div class="modal-content">
+      <!-- heading modal -->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Daftar Antrian</h4>
+      </div>
+      <!-- body modal -->
+      <div class="modal-body">
+        <div class="bootbox-body row">
 
-<!-- <div class="col-lg-12 text-center">
+          <!-- <div class="col-lg-12 text-center">
             <ul class="list-inline">
               <li id="pasienlama" class="list-inline-item">
                 <a class="btn btn-default btn-lg">
@@ -33,8 +33,8 @@
             
            <form action="<?php echo site_url('dashboardCS/pasien_baru_onsite') ?>" method="post">
             <input type="hidden" name="tipe_daftar" value="2"/>
-              <input type="hidden" name="id_poli" value="<?php echo $id_poli;?>"/>
-              <input type="hidden" name="id_jadwal" value="<?php echo $id_jadwal;?>"/>
+              <input type="hidden" name="id_poli" value="<?php echo $id_poli; ?>"/>
+              <input type="hidden" name="id_jadwal" value="<?php echo $id_jadwal; ?>"/>
 
                <div class="form-group col-md-12">
                 <h5 class="text-center" id="messagebaru">Silahkan masukan No. NIK</h5>
@@ -83,34 +83,44 @@
          </form>
        </div> -->
 
-       <div id="formpasienlama">
-        <form id="submit" action="<?php echo site_url('dashboardCS/pasien_lama_onsite') ?>" method="post" target="_blank">
-          <input type="hidden" name="tipe_daftar" value="2"/>
-              <input type="hidden" name="id_poli" value="<?php echo $id_poli;?>"/>
-              <input type="hidden" name="kode_poli" value="<?php echo $kode_poli;?>"/>
-              <input type="hidden" name="id_jadwal" value="<?php echo $id_jadwal;?>"/>
-                    <div class="text-center p-3 mb-2 bg-warning text-dark" id="message">Pastikan pasien sudah terdaftar sebagai di pasien dan memiliki NIK di <a href="https://simrs.rssinarkasih.com">SIMRS</a> </div>
-                    <h5 class="text-center" id="message">Silahkan masukan No. NIK</h5>
-                    <h5 class="text-center" id="datajson"></h5>
-               <div class="form-group col-md-12">
-                   <label>NIK Pasien</label>
-                      <input type="number" name="nik_pasien" id="no_nik_lama" class="form-control" placeholder="NIK Pasien.." required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "16"/>
-                    </div>
-               
-             <div class="form-row">
-               <div class="form-group col-md-12">
-                 <button onClick="$('#submit').submit(); window.location = '<?php echo site_url('dashboardCS/kelola_antrian_jadwal/'.$id_poli.'/'.$id_jadwal.'/') ?>'" id="btnPasienLama" type="submit" class="btn btn-primary col-md-12">Daftar</button></div>
-             </div>
-           </form>
-       </div>
+          <div id="formpasienlama">
+            <form id="submit" action="<?php echo site_url('dashboardCS/pasien_lama_onsite') ?>" method="post" target="_blank">
+              <input type="hidden" name="tipe_daftar" value="2" />
+              <input type="hidden" name="id_poli" value="<?php echo $id_poli; ?>" />
+              <input type="hidden" name="kode_poli" value="<?php echo $kode_poli; ?>" />
+              <input type="hidden" name="id_jadwal" value="<?php echo $id_jadwal; ?>" />
+              <div class="text-center p-3 mb-2 bg-warning text-dark" id="message">Pastikan pasien sudah terdaftar sebagai di pasien dan memiliki NIK di <a href="https://simrs.rssinarkasih.com">SIMRS</a> </div>
+              <h5 class="text-center" id="message">Silahkan masukan No. NIK</h5>
+              <h5 class="text-center" id="datajson"></h5>
+              <div class="form-group col-md-12">
+                <label>NIK Pasien</label>
+                <input type="number" name="nik_pasien" id="no_nik_lama" class="form-control" placeholder="NIK Pasien.." required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="16" />
+              </div>
+              <div class="alert alert-info" id="nama_pasien"></div>
 
-       </div>
-       </div>
-       <!-- footer modal -->
-       <div class="modal-footer">
-         <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-       </div>
-     </div>
-   </div>
- </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <button disabled onClick="$('#submit').submit(); window.location = '<?php echo site_url('dashboardCS/kelola_antrian_jadwal/' . $id_poli . '/' . $id_jadwal . '/') ?>'" id="btnPasienLama" type="submit" class="btn btn-primary col-md-12">Daftar</button></div>
+              </div>
+            </form>
+            <script>
+              $(document).ready(function() {
+                $("#no_nik_lama").focus(function() {
+                  if ($(this).val().lenght == 8 || (this).val().lenght == 16) {
+                    $("#btnPasienLama").attr('disabled', false);
+                  }
+                });
+              });
+            </script>
+          </div>
+
+        </div>
+      </div>
+      <!-- footer modal -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- End Modals-->
