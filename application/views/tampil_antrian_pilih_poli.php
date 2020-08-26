@@ -237,7 +237,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 fs: 0,
                                 cc_load_policty: 0,
                                 iv_load_policy: 3,
-                                autohide: 0,
+                                autohide: 0},
                                 events: {
                                     'onReady': onPlayerReady,
                                     'onError': e => {
