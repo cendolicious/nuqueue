@@ -104,13 +104,11 @@
               </div>
             </form>
             <script>
-              $(document).ready(function() {
-                $("#no_nik_lama").change(function() {
-                  if ($(this).val().length == 8 || (this).val().length == 16) {
+                $("#no_nik_lama").focus(function() {
+                  if ($("#no_nik_lama").val().length == 8 || ("#no_nik_lama").val().length == 16) {
                     $("#btnPasienLama").attr('disabled', false);
                   }
                 });
-              });
             </script>
           </div>
 
