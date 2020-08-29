@@ -202,7 +202,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 </div>
                             </div>
                             <div class="portlet-body">
-                                <div class="task-content">
+                                <div class="task-content" style="overflow-y: scroll;">
                                     <div class="scroller" style="height: 312px;" data-always-visible="1" data-rail-visible1="1">
                                         <!-- START TASK LIST -->
                                         <ul class="task-list">
