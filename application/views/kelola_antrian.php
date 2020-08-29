@@ -428,7 +428,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         audio.addEventListener('ended', function() {
                             audioIdx++;
                             if (audioIdx >= audioFiles.length - 1) {
-                                this.volume = 1
+                                this.volume = 0.6
                             };
 
                             if (audioIdx >= audioFiles.length) {
