@@ -415,6 +415,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             audioFiles.push("<?php echo base_url(); ?>assets/global/wav/poli_kandungan.wav");
                         } else if (noAntrianArray[0] == "SAR") {
                             audioFiles.push("<?php echo base_url(); ?>assets/global/wav/poli_saraf.wav");
+                        } else if (noAntrianArray[0] == "APO") {
+                            audioFiles.push("<?php echo base_url(); ?>assets/global/wav/apotik.wav");
                         }
 
 
