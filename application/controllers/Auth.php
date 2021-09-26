@@ -25,17 +25,18 @@ class Auth extends CI_Controller {
 		$pass_rs  = $this->input->post('password');
 		$getDataRS = $this->db->get_where('tbl_user',array('email' => $email_rs, 'password' => md5($pass_rs)))->row();
 		
-		$failed =  $this->session->userdata('failed_login'+$email_rs)
+		$failed =  $this->session->userdata('failed_login_'+$email_rs);
 
 		if(!$failed){
-			$this->session->set_userdata('failed_login'+$email_rs, 0)
+			$this->session->set_userdata('failed_login_'+$email_rs, 0);
 		} 
 		
 
 		if (empty($getDataRS)) {
+		
 			if ($failed<=3){
-				$failed += 1
-				$this->session->set_userdata('failed_login'+$email_rs, $failed)
+				$failed += 1;
+				$this->session->set_userdata('failed_login_'+$email_rs, $failed);
 			}
 
 			$this->load->view('landingpage');
