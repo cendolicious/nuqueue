@@ -42,8 +42,9 @@ class Auth extends CI_Controller {
 			$this->load->view('landingpage');
 			if($failed>=3) {
 				echo "<div style='padding-top:1cm;color:white;'><b><center>Gagal Login 3 Kali! Silahkan coba lagi dalam beberapa saat.</center></b></div>";
+			} else {
+				echo "<div style='padding-top:1cm;color:white;'><b><center>Email/Password salah!</center></b></div>";
 			}
-			echo "<div style='padding-top:1cm;color:white;'><b><center>Email/Password salah!</center></b></div>";
 
 		}else{ 
 			$this->session->set_userdata('email_rs',$getDataRS->email);
