@@ -20,13 +20,30 @@ class Auth extends CI_Controller {
 
 	public function login()
 	{
+
 		$email_rs = $this->input->post('email');
 		$pass_rs  = $this->input->post('password');
 		$getDataRS = $this->db->get_where('tbl_user',array('email' => $email_rs, 'password' => md5($pass_rs)))->row();
+		
+		$failed =  $this->session->userdata('failed_login'+$email_rs)
+
+		if(!$failed){
+			$this->session->set_userdata('failed_login'+$email_rs, 0)
+		} 
+		
 
 		if (empty($getDataRS)) {
-				$this->load->view('landingpage');
-		echo "<div style='padding-top:1cm;color:white;'><b><center>Email/Password salah!</center></b></div>";
+			if ($failed<=3){
+				$failed += 1
+				$this->session->set_userdata('failed_login'+$email_rs, $failed)
+			}
+
+			$this->load->view('landingpage');
+			if($failed>=3) {
+				echo "<div style='padding-top:1cm;color:white;'><b><center>Gagal Login 3 Kali! Silahkan coba lagi dalam beberapa saat.</center></b></div>";
+			}
+			echo "<div style='padding-top:1cm;color:white;'><b><center>Email/Password salah!</center></b></div>";
+
 		}else{ 
 			$this->session->set_userdata('email_rs',$getDataRS->email);
 			// $this->session->set_userdata('nama_rs',$getDataRS->nama_rs);
