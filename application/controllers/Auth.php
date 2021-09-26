@@ -27,10 +27,9 @@ class Auth extends CI_Controller {
 		
 		$failed =  $this->session->userdata('failed_login_'+$email_rs);
 
-		if(!$failed){
+		if (is_null($failed)){
 			$this->session->set_userdata('failed_login_'+$email_rs, 0);
 		} 
-		
 
 		if (empty($getDataRS)) {
 		
