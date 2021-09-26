@@ -25,25 +25,20 @@ class Auth extends CI_Controller {
 		$pass_rs  = $this->input->post('password');
 		$getDataRS = $this->db->get_where('tbl_user',array('email' => $email_rs, 'password' => md5($pass_rs)))->row();
 		
-		$failed =  $this->session->userdata('failed_login_'+$email_rs);
-		echo "<div style='padding-top:1cm;color:white;'><b><center>D ".$failed ."</center></b></div>";
+		$failed =  $this->session->userdata('failed_login_'.$email_rs);
 
 		if (is_null($failed)){
-			echo "<div style='padding-top:1cm;color:white;'><b><center>A ".$failed ."</center></b></div>";
-			$this->session->set_userdata('failed_login_'+$email_rs, 0);
+			$this->session->set_userdata('failed_login_'.$email_rs, 0);
 		} 
 
 		if (empty($getDataRS)) {
-			echo "<div style='padding-top:1cm;color:white;'><b><center>B ".$failed ."</center></b></div>";
 			if ($failed<=3){
-				echo "<div style='padding-top:1cm;color:white;'><b><center>C ".$failed ."</center></b></div>";
 				$failed += 1;
-				$this->session->set_userdata('failed_login_'+$email_rs, $failed);
+				$this->session->set_userdata('failed_login_'.$email_rs, $failed);
 			}
 
 			$this->load->view('landingpage');
 			if($failed>=3) {
-				echo "<div style='padding-top:1cm;color:white;'><b><center>E ".$failed ."</center></b></div>";
 				echo "<div style='padding-top:1cm;color:white;'><b><center>Gagal Login 3 Kali! Silahkan coba lagi dalam beberapa saat.</center></b></div>";
 			} else {
 				echo "<div style='padding-top:1cm;color:white;'><b><center>Email/Password salah!</center></b></div>";
