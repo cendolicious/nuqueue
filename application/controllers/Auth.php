@@ -31,6 +31,11 @@ class Auth extends CI_Controller {
 			$this->session->set_userdata('failed_login_'.$email_rs, 0);
 		} 
 
+		if($failed>=3) {
+			$this->load->view('landingpage');
+			echo "<div style='padding-top:1cm;color:white;'><b><center>Gagal Login 3 Kali! Silahkan coba lagi dalam beberapa saat.</center></b></div>";
+		}
+
 		if (empty($getDataRS)) {
 			if ($failed<=3){
 				$failed += 1;
